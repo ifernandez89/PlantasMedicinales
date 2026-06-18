@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-verde-50 text-gray-800;
+  }
+}
+
+@layer components {
+  .card-planta {
+    @apply bg-white rounded-2xl shadow-sm border border-verde-100 p-5 hover:shadow-md transition-shadow;
+  }
+
+  .badge-accion {
+    @apply inline-block bg-verde-100 text-verde-700 text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .badge-sistema {
+    @apply inline-block bg-gray-100 text-gray-600 text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+}
