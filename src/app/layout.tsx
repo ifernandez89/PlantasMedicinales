@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import Link from "next/link";
 import NavMobile from "@/components/NavMobile";
+import InstallPWA from "@/components/InstallPWA";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -26,6 +27,31 @@ export const metadata: Metadata = {
   },
   description:
     "Un herbarium emocional moderno. Plantas medicinales organizadas por acción terapéutica, sistema corporal y ciclo de vida.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Herbarium",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  themeColor: "#7ba684",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  icons: {
+    icon: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 const navLinks = [
@@ -128,6 +154,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
         </footer>
+
+        {/* PWA Install Prompt */}
+        <InstallPWA />
       </body>
     </html>
   );

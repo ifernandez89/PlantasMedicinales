@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152" height="152" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="152" height="152" fill="#7ba684"/>
+  
+  <!-- Padding interno (10%) -->
+  <g transform="translate(15.200000000000001, 15.200000000000001)">
+    <!-- Contenido en el 80% central -->
+    <rect width="121.60000000000001" height="121.60000000000001" fill="none"/>
+    
+    <!-- Diamante (símbolo de Herbarium) -->
+    <path d="M 60.800000000000004 15.200000000000001 
+             L 106.39999999999999 60.800000000000004 
+             L 60.800000000000004 106.39999999999999 
+             L 15.200000000000001 60.800000000000004 Z" 
+          fill="#fdfaf6" 
+          stroke="#fdfaf6" 
+          stroke-width="2"
+          opacity="0.9"/>
+    
+    <!-- Letra H estilizada (opcional, comentar si no gusta) -->
+    <text x="60.800000000000004" 
+          y="76" 
+          font-family="Georgia, serif" 
+          font-size="45.6" 
+          font-weight="300"
+          fill="#fdfaf6" 
+          text-anchor="middle" 
+          dominant-baseline="middle">H</text>
+  </g>
+</svg>
