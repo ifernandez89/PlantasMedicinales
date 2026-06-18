@@ -93,7 +93,7 @@ contraindicaciones:
   - "Embarazo (aceite esencial en uso interno)"
 toxicidad: null
 
-imagen: "/imagenes/lavanda.jpg"
+imagen: "/imagenes/lavanda.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -85,7 +85,7 @@ contraindicaciones:
   - "Hipotiroidismo severo (consultar médico)"
 toxicidad: null
 
-imagen: "/imagenes/ajo.jpg"
+imagen: "/imagenes/ajo.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -80,7 +80,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/laurel.jpg"
+imagen: "/imagenes/laurel.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -65,7 +65,7 @@ contraindicaciones:
   - "Hipotiroidismo (consultar médico)"
 toxicidad: null
 
-imagen: "/imagenes/melisa.jpg"
+imagen: "/imagenes/melisa.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

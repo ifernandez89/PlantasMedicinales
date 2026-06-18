@@ -74,7 +74,7 @@ contraindicaciones:
   - "Niños"
 toxicidad: "Planta tóxica; los alcaloides son citotóxicos en dosis no controladas"
 
-imagen: "/imagenes/vinca.jpg"
+imagen: "/imagenes/vinca.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

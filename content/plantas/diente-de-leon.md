@@ -94,7 +94,7 @@ contraindicaciones:
   - "Cálculos biliares obstructivos"
 toxicidad: null
 
-imagen: "/imagenes/diente-de-leon.jpg"
+imagen: "/imagenes/diente-de-leon.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

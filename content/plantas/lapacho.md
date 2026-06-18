@@ -86,7 +86,7 @@ contraindicaciones:
   - "Tratamiento con anticoagulantes"
 toxicidad: "El lapachol en altas dosis puede ser tóxico"
 
-imagen: "/imagenes/lapacho.jpg"
+imagen: "/imagenes/lapacho.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -95,7 +95,7 @@ contraindicaciones:
   - "Embarazo (estimula el útero)"
 toxicidad: null
 
-imagen: "/imagenes/ortiga.jpg"
+imagen: "/imagenes/ortiga.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

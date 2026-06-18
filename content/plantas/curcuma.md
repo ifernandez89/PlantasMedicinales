@@ -80,7 +80,7 @@ contraindicaciones:
   - "Embarazo (dosis terapéuticas, no culinarias)"
 toxicidad: null
 
-imagen: "/imagenes/curcuma.jpg"
+imagen: "/imagenes/curcuma.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

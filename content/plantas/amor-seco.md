@@ -67,7 +67,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/amor-seco.jpg"
+imagen: "/imagenes/amor-seco.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

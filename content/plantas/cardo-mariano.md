@@ -80,7 +80,7 @@ contraindicaciones:
   - "Alergia a plantas de la familia Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/cardo-mariano.jpg"
+imagen: "/imagenes/cardo-mariano.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

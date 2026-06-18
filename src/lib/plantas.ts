@@ -105,7 +105,14 @@ export async function getPlantaBySlug(slug: string): Promise<Planta> {
     acciones:           arr(data.acciones),
     sistemas:           arr(data.sistemas),
     afecciones:         arr(data.afecciones),
-    accionesTerapeuticas: arr(data.accionesTerapeuticas),
+    // accionesTerapeuticas es un array de objetos — no usar arr()
+    accionesTerapeuticas: Array.isArray(data.accionesTerapeuticas)
+      ? data.accionesTerapeuticas.map((at: AccionTerapeutica) => ({
+          accion:    at.accion    ?? "",
+          sistemas:  Array.isArray(at.sistemas)  ? at.sistemas  : [],
+          afecciones: Array.isArray(at.afecciones) ? at.afecciones : [],
+        }))
+      : [],
 
     usosEtnobotanicos:  arr(data.usosEtnobotanicos),
     polinizadores:      arr(data.polinizadores),

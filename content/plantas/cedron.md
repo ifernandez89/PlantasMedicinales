@@ -65,7 +65,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/cedron.jpg"
+imagen: "/imagenes/cedron.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

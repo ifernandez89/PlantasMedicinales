@@ -74,7 +74,7 @@ contraindicaciones:
   - "Hipotensión"
 toxicidad: null
 
-imagen: "/imagenes/marrubio.jpg"
+imagen: "/imagenes/marrubio.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

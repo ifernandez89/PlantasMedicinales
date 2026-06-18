@@ -85,7 +85,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/pezuna-de-vaca.jpg"
+imagen: "/imagenes/pezuna-de-vaca.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

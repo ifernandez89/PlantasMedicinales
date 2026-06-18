@@ -109,7 +109,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/llanten.jpg"
+imagen: "/imagenes/llanten.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

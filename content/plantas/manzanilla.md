@@ -94,7 +94,7 @@ contraindicaciones:
   - "Alergia a plantas de la familia Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/manzanilla.jpg"
+imagen: "/imagenes/manzanilla.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

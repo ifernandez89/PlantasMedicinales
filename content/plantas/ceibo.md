@@ -96,7 +96,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: "Las semillas contienen alcaloides potencialmente tóxicos"
 
-imagen: "/imagenes/ceibo.jpg"
+imagen: "/imagenes/ceibo.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -112,7 +112,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/calendula.jpg"
+imagen: "/imagenes/calendula.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

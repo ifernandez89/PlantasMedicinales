@@ -102,7 +102,7 @@ contraindicaciones:
   - "Cálculos biliares (aceite esencial)"
 toxicidad: null
 
-imagen: "/imagenes/menta.jpg"
+imagen: "/imagenes/menta.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

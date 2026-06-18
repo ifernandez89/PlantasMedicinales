@@ -92,7 +92,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: "Usar la especie arvense; otras especies del género pueden ser tóxicas"
 
-imagen: "/imagenes/cola-de-caballo.jpg"
+imagen: "/imagenes/cola-de-caballo.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

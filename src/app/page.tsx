@@ -5,6 +5,7 @@ import {
   getAllSistemas,
   getAllAfecciones,
 } from "@/lib/plantas";
+import PlantaCard from "@/components/PlantaCard";
 
 export default async function HomePage() {
   const [plantas, acciones, sistemas, afecciones] = await Promise.all([
@@ -101,31 +102,8 @@ export default async function HomePage() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {plantas.map((planta) => (
-            <Link
-              key={planta.slug}
-              href={`/plantas/${planta.slug}`}
-              className="card-planta block space-y-2"
-            >
-              <h3 className="font-semibold text-verde-800">{planta.nombre}</h3>
-              {planta.nombreCientifico && (
-                <p className="text-xs italic text-gray-400">
-                  {planta.nombreCientifico}
-                </p>
-              )}
-              <div className="flex flex-wrap gap-1 pt-1">
-                {planta.acciones.slice(0, 3).map((a) => (
-                  <span key={a} className="badge-accion">
-                    {a}
-                  </span>
-                ))}
-                {planta.acciones.length > 3 && (
-                  <span className="badge-accion">
-                    +{planta.acciones.length - 3}
-                  </span>
-                )}
-              </div>
-            </Link>
+          {plantas.map((planta, i) => (
+            <PlantaCard key={planta.slug} planta={planta} priority={i < 6} />
           ))}
         </div>
       </section>

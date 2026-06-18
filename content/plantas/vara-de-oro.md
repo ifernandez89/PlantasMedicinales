@@ -83,7 +83,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/vara-de-oro.jpg"
+imagen: "/imagenes/vara-de-oro.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

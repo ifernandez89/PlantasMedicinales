@@ -76,7 +76,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: "Los frutos pueden ser tóxicos para aves pequeñas en grandes cantidades"
 
-imagen: "/imagenes/aguaribay.jpg"
+imagen: "/imagenes/aguaribay.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

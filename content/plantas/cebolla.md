@@ -85,7 +85,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/cebolla.jpg"
+imagen: "/imagenes/cebolla.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

@@ -92,7 +92,7 @@ contraindicaciones:
   - "Personas con coagulopatías"
 toxicidad: "Tóxica en dosis altas; puede causar nefrotoxicidad y hepatotoxicidad"
 
-imagen: "/imagenes/ruda.jpg"
+imagen: "/imagenes/ruda.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

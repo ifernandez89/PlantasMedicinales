@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Usar Skills Disponibles",
+  "description": "Antes de cada prompt, recuerda al agente que revise y active las skills relevantes disponibles según la tarea solicitada",
+  "version": "1",
+  "when": {
+    "type": "promptSubmit"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Antes de responder, revisá las skills disponibles y activá las que sean relevantes para la tarea solicitada. Skills disponibles: accessibility, bun, vercel-composition-patterns, frontend-design, next-best-practices, next-cache-components, next-upgrade, vercel-react-best-practices, seo, tailwind-css-patterns, typescript-advanced-types. Por ejemplo: si la tarea involucra componentes React o Next.js activá next-best-practices y/o vercel-react-best-practices; si hay estilos activá tailwind-css-patterns; si hay tipos TypeScript complejos activá typescript-advanced-types; si hay UI activá frontend-design. Activá SOLO las relevantes para no cargar contexto innecesario."
+  }
+}

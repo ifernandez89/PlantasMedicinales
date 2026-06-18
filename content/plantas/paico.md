@@ -96,7 +96,7 @@ contraindicaciones:
   - "Niños pequeños sin supervisión médica"
 toxicidad: "El ascaridol es tóxico en dosis altas; usar dosis moderadas"
 
-imagen: "/imagenes/paico.jpg"
+imagen: "/imagenes/paico.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

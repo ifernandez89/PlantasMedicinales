@@ -88,7 +88,7 @@ contraindicaciones:
   - "Lactancia"
 toxicidad: "Neurotóxica en dosis muy altas"
 
-imagen: "/imagenes/artemisa-annua.jpg"
+imagen: "/imagenes/artemisa-annua.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

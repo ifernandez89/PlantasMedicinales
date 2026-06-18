@@ -72,7 +72,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/escoba-dura.jpg"
+imagen: "/imagenes/escoba-dura.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

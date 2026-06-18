@@ -75,7 +75,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/equinacea.jpg"
+imagen: "/imagenes/equinacea.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"

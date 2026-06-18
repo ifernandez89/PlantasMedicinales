@@ -98,7 +98,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/chanar.jpg"
+imagen: "/imagenes/chanar.png"
 imagenes: []
 fuentes:
   - titulo: "Acción Terapéutica"
