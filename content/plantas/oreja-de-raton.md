@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/oreja_de_raton.png"
+imagen: "/imagenes/oreja_de_raton.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre (primavera)"
 epocaFructificacion: "noviembre a enero"

@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/tala.png"
+imagen: "/imagenes/tala.webp"
 imagenes: []
 epocaFloracion: "agosto a octubre"
 epocaFructificacion: "octubre a enero"

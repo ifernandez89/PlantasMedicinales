@@ -27,7 +27,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/malva.png"
+imagen: "/imagenes/malva.webp"
 imagenes: []
 epocaFloracion: "octubre a marzo (primavera-verano)"
 epocaFructificacion: "diciembre a abril"

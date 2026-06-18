@@ -67,7 +67,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/amor-seco.png"
+imagen: "/imagenes/amor-seco.webp"
 imagenes: []
 epocaFloracion: "febrero a mayo"
 epocaFructificacion: "mayo a julio"

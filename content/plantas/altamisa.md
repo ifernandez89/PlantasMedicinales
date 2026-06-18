@@ -26,7 +26,7 @@ precauciones:
   - "Puede causar alergias en personas sensibles a las asteráceas."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/altamisa.png"
+imagen: "/imagenes/altamisa.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo (verano)"
 epocaFructificacion: "febrero a abril"

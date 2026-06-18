@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/doctorcito.png"
+imagen: "/imagenes/doctorcito.webp"
 imagenes: []
 epocaFloracion: "octubre a enero"
 epocaFructificacion: "diciembre a marzo"

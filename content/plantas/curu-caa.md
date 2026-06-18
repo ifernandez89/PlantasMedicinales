@@ -24,7 +24,7 @@ precauciones:
   - "Perteneciente a las solanáceas; evitar su ingestión interna sin estricto control por potencial toxicidad."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/curu_caa.png"
+imagen: "/imagenes/curu_caa.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero"
 epocaFructificacion: "enero a abril"

@@ -112,7 +112,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/calendula.png"
+imagen: "/imagenes/calendula.webp"
 imagenes: []
 epocaFloracion: "todo el año (primavera-otoño)"
 epocaFructificacion: "continua"

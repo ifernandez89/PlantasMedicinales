@@ -25,7 +25,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/sangre_de_drago.png"
+imagen: "/imagenes/sangre_de_drago.webp"
 imagenes: []
 epocaFloracion: "septiembre a octubre"
 epocaFructificacion: "noviembre a diciembre"

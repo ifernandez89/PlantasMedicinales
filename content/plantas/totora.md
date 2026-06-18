@@ -22,7 +22,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/totora.png"
+imagen: "/imagenes/totora.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero"
 epocaFructificacion: "enero a abril"

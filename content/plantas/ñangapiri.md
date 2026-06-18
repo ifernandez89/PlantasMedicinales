@@ -26,7 +26,7 @@ precauciones:
   - "Controlar los niveles de presión si ya se toman antihipertensivos."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/ñangapiri.png"
+imagen: "/imagenes/ñangapiri.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre"
 epocaFructificacion: "noviembre a enero"

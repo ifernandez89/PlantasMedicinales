@@ -95,7 +95,7 @@ contraindicaciones:
   - "Embarazo (estimula el útero)"
 toxicidad: null
 
-imagen: "/imagenes/ortiga.png"
+imagen: "/imagenes/ortiga.webp"
 imagenes: []
 epocaFloracion: "septiembre a enero"
 epocaFructificacion: "noviembre a marzo"

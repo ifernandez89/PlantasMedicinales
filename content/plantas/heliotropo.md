@@ -24,7 +24,7 @@ precauciones:
   - "Contiene alcaloides pirrolizidínicos; no se aconseja su consumo interno prolongado."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/heliotropo.png"
+imagen: "/imagenes/heliotropo.webp"
 imagenes: []
 epocaFloracion: "octubre a febrero"
 epocaFructificacion: "diciembre a abril"

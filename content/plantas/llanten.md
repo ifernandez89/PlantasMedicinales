@@ -109,7 +109,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/llanten.png"
+imagen: "/imagenes/llanten.webp"
 imagenes: []
 epocaFloracion: "octubre a marzo"
 epocaFructificacion: "enero a mayo"

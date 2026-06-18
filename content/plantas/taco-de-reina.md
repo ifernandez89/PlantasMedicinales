@@ -27,7 +27,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/taco_de_reina.png"
+imagen: "/imagenes/taco_de_reina.webp"
 imagenes: []
 epocaFloracion: "octubre a marzo"
 epocaFructificacion: "diciembre a abril"

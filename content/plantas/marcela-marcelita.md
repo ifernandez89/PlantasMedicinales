@@ -25,7 +25,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/marcela_marcelita.png"
+imagen: "/imagenes/marcela_marcelita.webp"
 imagenes: []
 epocaFloracion: "marzo a abril (otoño)"
 epocaFructificacion: "mayo a junio"

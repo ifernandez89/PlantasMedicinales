@@ -76,19 +76,12 @@ function arr(value: unknown): string[] {
 
 /**
  * Convierte ruta de imagen a formato optimizado
- * /imagenes/planta.png -> /imagenes-optimized/thumbs/planta.webp
+ * Después de migrate-image-refs, las imágenes ya son WEBP
  */
 function getOptimizedImagePath(originalPath: string | null, type: 'thumb' | 'full' = 'thumb'): string | null {
   if (!originalPath) return null;
-  
-  // Si ya es webp optimizada, devolver tal cual
-  if (originalPath.includes('imagenes-optimized')) return originalPath;
-  
-  // Convertir PNG a WEBP optimizado
-  const parsed = path.parse(originalPath);
-  const nameWithoutExt = parsed.name;
-  
-  return `/imagenes-optimized/${type}/${nameWithoutExt}.webp`;
+  // Las imágenes ya están en /imagenes/ como .webp después de la migración
+  return originalPath;
 }
 
 // ─── API pública ──────────────────────────────────────────────────────────────

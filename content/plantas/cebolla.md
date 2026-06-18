@@ -85,7 +85,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/cebolla.png"
+imagen: "/imagenes/cebolla.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a febrero"

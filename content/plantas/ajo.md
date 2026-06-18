@@ -85,7 +85,7 @@ contraindicaciones:
   - "Hipotiroidismo severo (consultar médico)"
 toxicidad: null
 
-imagen: "/imagenes/ajo.png"
+imagen: "/imagenes/ajo.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a febrero"

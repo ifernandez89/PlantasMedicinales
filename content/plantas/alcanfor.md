@@ -28,7 +28,7 @@ precauciones:
   - "No aplicar sobre heridas abiertas."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/alcanfor.png"
+imagen: "/imagenes/alcanfor.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre (primavera)"
 epocaFructificacion: "diciembre a febrero"

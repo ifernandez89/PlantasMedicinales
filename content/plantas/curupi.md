@@ -24,7 +24,7 @@ precauciones:
   - "El látex puede ser sumamente irritante para los ojos y mucosas."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/curupi.png"
+imagen: "/imagenes/curupi.webp"
 imagenes: []
 epocaFloracion: "septiembre a diciembre (primavera)"
 epocaFructificacion: "enero a marzo"

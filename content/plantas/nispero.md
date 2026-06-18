@@ -26,7 +26,7 @@ precauciones:
   - "Las semillas contienen compuestos cianogénicos y no deben consumirse."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/nispero.png"
+imagen: "/imagenes/nispero.webp"
 imagenes: []
 epocaFloracion: "mayo a julio (otoño-invierno)"
 epocaFructificacion: "agosto a octubre"

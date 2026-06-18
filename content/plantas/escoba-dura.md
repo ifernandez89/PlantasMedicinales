@@ -72,7 +72,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/escoba-dura.png"
+imagen: "/imagenes/escoba-dura.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "febrero a abril"

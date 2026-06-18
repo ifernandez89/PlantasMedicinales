@@ -27,7 +27,7 @@ precauciones:
   - "Puede irritar mucosas si se consume en exceso."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/catay.png"
+imagen: "/imagenes/catay.webp"
 imagenes: []
 epocaFloracion: "diciembre a abril (verano-otoño)"
 epocaFructificacion: "febrero a mayo"

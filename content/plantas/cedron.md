@@ -65,7 +65,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/cedron.png"
+imagen: "/imagenes/cedron.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "marzo a abril"

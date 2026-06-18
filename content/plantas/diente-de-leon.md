@@ -94,7 +94,7 @@ contraindicaciones:
   - "Cálculos biliares obstructivos"
 toxicidad: null
 
-imagen: "/imagenes/diente-de-leon.png"
+imagen: "/imagenes/diente-de-leon.webp"
 imagenes: []
 epocaFloracion: "agosto a mayo (casi todo el año)"
 epocaFructificacion: "continua"

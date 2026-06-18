@@ -26,7 +26,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/jacaranda.png"
+imagen: "/imagenes/jacaranda.webp"
 imagenes: []
 epocaFloracion: "octubre a noviembre (primavera)"
 epocaFructificacion: "enero a marzo"

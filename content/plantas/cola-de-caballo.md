@@ -92,7 +92,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: "Usar la especie arvense; otras especies del género pueden ser tóxicas"
 
-imagen: "/imagenes/cola-de-caballo.png"
+imagen: "/imagenes/cola-de-caballo.webp"
 imagenes: []
 epocaFloracion: "sin flores (esporófito)"
 epocaFructificacion: "agosto a octubre (esporangio)"

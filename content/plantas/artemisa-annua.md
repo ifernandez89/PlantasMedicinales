@@ -88,7 +88,7 @@ contraindicaciones:
   - "Lactancia"
 toxicidad: "Neurotóxica en dosis muy altas"
 
-imagen: "/imagenes/artemisa-annua.png"
+imagen: "/imagenes/artemisa-annua.webp"
 imagenes: []
 epocaFloracion: "febrero a abril"
 epocaFructificacion: "abril a junio"

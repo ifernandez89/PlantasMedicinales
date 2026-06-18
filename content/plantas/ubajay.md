@@ -23,7 +23,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/ubajay.png"
+imagen: "/imagenes/ubajay.webp"
 imagenes: []
 epocaFloracion: "septiembre a octubre"
 epocaFructificacion: "noviembre a enero"

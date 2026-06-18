@@ -27,7 +27,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/sarandi_blanco.png"
+imagen: "/imagenes/sarandi_blanco.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a marzo"

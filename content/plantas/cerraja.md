@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/cerraja.png"
+imagen: "/imagenes/cerraja.webp"
 imagenes: []
 epocaFloracion: "casi todo el año (picos en primavera-verano)"
 epocaFructificacion: "continua"

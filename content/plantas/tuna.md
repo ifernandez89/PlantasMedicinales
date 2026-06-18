@@ -24,7 +24,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/tuna.png"
+imagen: "/imagenes/tuna.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a marzo"

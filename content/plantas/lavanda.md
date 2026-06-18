@@ -93,7 +93,7 @@ contraindicaciones:
   - "Embarazo (aceite esencial en uso interno)"
 toxicidad: null
 
-imagen: "/imagenes/lavanda.png"
+imagen: "/imagenes/lavanda.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a febrero"

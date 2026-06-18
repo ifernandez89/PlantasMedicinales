@@ -94,7 +94,7 @@ contraindicaciones:
   - "Alergia a plantas de la familia Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/manzanilla.png"
+imagen: "/imagenes/manzanilla.webp"
 imagenes: []
 epocaFloracion: "octubre a enero"
 epocaFructificacion: "diciembre a febrero"

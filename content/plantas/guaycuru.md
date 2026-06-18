@@ -24,7 +24,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/guaycuru.png"
+imagen: "/imagenes/guaycuru.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "febrero a marzo"

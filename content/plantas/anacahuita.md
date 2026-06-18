@@ -24,7 +24,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/anacahuita.png"
+imagen: "/imagenes/anacahuita.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "febrero a abril"

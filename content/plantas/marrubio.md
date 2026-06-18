@@ -74,7 +74,7 @@ contraindicaciones:
   - "Hipotensión"
 toxicidad: null
 
-imagen: "/imagenes/marrubio.png"
+imagen: "/imagenes/marrubio.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "diciembre a febrero"

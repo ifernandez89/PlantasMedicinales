@@ -30,7 +30,7 @@ precauciones:
   - "Evitar dosis excesivas."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/mburucuya_pasionaria.png"
+imagen: "/imagenes/mburucuya_pasionaria.webp"
 imagenes: []
 epocaFloracion: "octubre a mayo (primavera a otoño)"
 epocaFructificacion: "enero a junio"

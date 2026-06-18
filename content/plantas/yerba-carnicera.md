@@ -29,7 +29,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/yerba_carnicera.png"
+imagen: "/imagenes/yerba_carnicera.webp"
 imagenes: []
 epocaFloracion: "septiembre a febrero"
 epocaFructificacion: "noviembre a abril"

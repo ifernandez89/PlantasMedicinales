@@ -80,7 +80,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/laurel.png"
+imagen: "/imagenes/laurel.webp"
 imagenes: []
 epocaFloracion: "marzo a mayo"
 epocaFructificacion: "junio a agosto"

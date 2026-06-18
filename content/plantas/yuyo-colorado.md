@@ -26,7 +26,7 @@ precauciones:
   - "Puede acumular nitratos si crece en suelos sobrefertilizados."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/yuyo_colorado.png"
+imagen: "/imagenes/yuyo_colorado.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a mayo"

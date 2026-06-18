@@ -24,7 +24,7 @@ precauciones:
   - "Contraindicada en inflamaciones intestinales y embarazo."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/sen_de_campo.png"
+imagen: "/imagenes/sen_de_campo.webp"
 imagenes: []
 epocaFloracion: "enero a mayo (verano-otoño)"
 epocaFructificacion: "marzo a junio"

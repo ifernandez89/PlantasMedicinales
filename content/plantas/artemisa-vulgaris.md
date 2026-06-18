@@ -26,7 +26,7 @@ precauciones:
   - "Contraindicada strictly en el embarazo."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/artemisa_vulgaris.png"
+imagen: "/imagenes/artemisa_vulgaris.webp"
 imagenes: []
 epocaFloracion: "enero a abril (verano-otoño)"
 epocaFructificacion: "marzo a mayo"

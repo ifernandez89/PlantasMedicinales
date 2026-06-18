@@ -53,7 +53,7 @@ precauciones: []
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/tala_de_indio.png"
+imagen: "/imagenes/tala_de_indio.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre"
 epocaFructificacion: "noviembre a enero"

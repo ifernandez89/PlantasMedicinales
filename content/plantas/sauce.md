@@ -25,7 +25,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/sauce.png"
+imagen: "/imagenes/sauce.webp"
 imagenes: []
 epocaFloracion: "agosto a octubre"
 epocaFructificacion: "noviembre a diciembre"

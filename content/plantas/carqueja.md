@@ -27,7 +27,7 @@ precauciones:
   - "No se recomienda su uso prolongado sin supervisión en personas hipotensas o embarazadas."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/carqueja.png"
+imagen: "/imagenes/carqueja.webp"
 imagenes: []
 epocaFloracion: "enero a mayo (verano-otoño)"
 epocaFructificacion: "marzo a junio"

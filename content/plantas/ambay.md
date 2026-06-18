@@ -24,7 +24,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/ambay.png"
+imagen: "/imagenes/ambay.webp"
 imagenes: []
 epocaFloracion: "agosto a octubre"
 epocaFructificacion: "noviembre a febrero"

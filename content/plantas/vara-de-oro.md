@@ -83,7 +83,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/vara-de-oro.png"
+imagen: "/imagenes/vara-de-oro.webp"
 imagenes: []
 epocaFloracion: "enero a abril"
 epocaFructificacion: "abril a junio"

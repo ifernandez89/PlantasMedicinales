@@ -78,7 +78,7 @@ precauciones: []
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/caa_piqui.png"
+imagen: "/imagenes/caa_piqui.webp"
 imagenes: []
 epocaFloracion: "marzo a mayo (otoño)"
 epocaFructificacion: "mayo a julio"

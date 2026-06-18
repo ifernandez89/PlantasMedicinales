@@ -27,7 +27,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/salvia_morada.png"
+imagen: "/imagenes/salvia_morada.webp"
 imagenes: []
 epocaFloracion: "octubre a abril (primavera a otoño)"
 epocaFructificacion: "diciembre a mayo"

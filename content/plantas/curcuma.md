@@ -80,7 +80,7 @@ contraindicaciones:
   - "Embarazo (dosis terapéuticas, no culinarias)"
 toxicidad: null
 
-imagen: "/imagenes/curcuma.png"
+imagen: "/imagenes/curcuma.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a febrero"

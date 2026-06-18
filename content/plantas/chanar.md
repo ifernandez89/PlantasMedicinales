@@ -98,7 +98,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/chanar.png"
+imagen: "/imagenes/chanar.webp"
 imagenes: []
 epocaFloracion: "agosto a octubre"
 epocaFructificacion: "noviembre a enero"

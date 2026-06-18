@@ -102,7 +102,7 @@ contraindicaciones:
   - "Cálculos biliares (aceite esencial)"
 toxicidad: null
 
-imagen: "/imagenes/menta.png"
+imagen: "/imagenes/menta.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

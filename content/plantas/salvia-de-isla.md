@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/salvia_de_isla.png"
+imagen: "/imagenes/salvia_de_isla.webp"
 imagenes: []
 epocaFloracion: "octubre a marzo (primavera-verano)"
 epocaFructificacion: "enero a abril"

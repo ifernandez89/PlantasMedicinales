@@ -80,7 +80,7 @@ contraindicaciones:
   - "Alergia a plantas de la familia Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/cardo-mariano.png"
+imagen: "/imagenes/cardo-mariano.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a febrero"

@@ -86,7 +86,7 @@ contraindicaciones:
   - "Tratamiento con anticoagulantes"
 toxicidad: "El lapachol en altas dosis puede ser tóxico"
 
-imagen: "/imagenes/lapacho.png"
+imagen: "/imagenes/lapacho.webp"
 imagenes: []
 epocaFloracion: "julio a septiembre (previo a hojarse)"
 epocaFructificacion: "octubre a diciembre"

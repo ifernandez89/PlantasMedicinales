@@ -76,7 +76,7 @@ precauciones:
 contraindicaciones: []
 toxicidad: "Los frutos pueden ser tóxicos para aves pequeñas en grandes cantidades"
 
-imagen: "/imagenes/aguaribay.png"
+imagen: "/imagenes/aguaribay.webp"
 imagenes: []
 epocaFloracion: "agosto a noviembre"
 epocaFructificacion: "diciembre a marzo"

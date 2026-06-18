@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/cucurbita.png"
+imagen: "/imagenes/cucurbita.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero (primavera-verano)"
 epocaFructificacion: "enero a abril"

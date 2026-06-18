@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/malvisco.png"
+imagen: "/imagenes/malvisco.webp"
 imagenes: []
 epocaFloracion: "octubre a febrero"
 epocaFructificacion: "diciembre a marzo"

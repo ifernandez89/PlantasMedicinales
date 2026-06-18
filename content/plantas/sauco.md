@@ -28,7 +28,7 @@ polinizadores: []
 precauciones: []
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/sauco.png"
+imagen: "/imagenes/sauco.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre"
 epocaFructificacion: "enero a marzo"

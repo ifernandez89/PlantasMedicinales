@@ -25,7 +25,7 @@ precauciones:
   - "Garantizar la higiene absoluta si se aplica cerca o dentro de los ojos."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/santa_lucia.png"
+imagen: "/imagenes/santa_lucia.webp"
 imagenes: []
 epocaFloracion: "octubre a marzo (meses cálidos)"
 epocaFructificacion: "noviembre a abril"

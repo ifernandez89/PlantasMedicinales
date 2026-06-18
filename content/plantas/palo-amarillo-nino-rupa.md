@@ -74,7 +74,7 @@ precauciones: []
 contraindicaciones: []
 toxicidad: null
 
-imagen: "/imagenes/palo_amarillo_nino_rupa.png"
+imagen: "/imagenes/palo_amarillo_nino_rupa.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre"
 epocaFructificacion: "noviembre a enero"

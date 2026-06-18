@@ -26,7 +26,7 @@ precauciones:
 
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/salvia_guaranitica.png"
+imagen: "/imagenes/salvia_guaranitica.webp"
 imagenes: []
 epocaFloracion: "noviembre a mayo"
 epocaFructificacion: "enero a junio"

@@ -26,7 +26,7 @@ precauciones:
   - "Contraindicada en pacientes trasplantados o que tomen inmunosupresores."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/uña_de_gato.png"
+imagen: "/imagenes/uña_de_gato.webp"
 imagenes: []
 epocaFloracion: "agosto a diciembre"
 epocaFructificacion: "noviembre a marzo"

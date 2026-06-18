@@ -96,7 +96,7 @@ contraindicaciones:
   - "Niños pequeños sin supervisión médica"
 toxicidad: "El ascaridol es tóxico en dosis altas; usar dosis moderadas"
 
-imagen: "/imagenes/paico.png"
+imagen: "/imagenes/paico.webp"
 imagenes: []
 epocaFloracion: "enero a abril"
 epocaFructificacion: "marzo a junio"

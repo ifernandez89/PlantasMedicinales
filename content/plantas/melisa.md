@@ -65,7 +65,7 @@ contraindicaciones:
   - "Hipotiroidismo (consultar médico)"
 toxicidad: null
 
-imagen: "/imagenes/melisa.png"
+imagen: "/imagenes/melisa.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

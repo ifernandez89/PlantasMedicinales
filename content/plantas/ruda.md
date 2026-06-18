@@ -92,7 +92,7 @@ contraindicaciones:
   - "Personas con coagulopatías"
 toxicidad: "Tóxica en dosis altas; puede causar nefrotoxicidad y hepatotoxicidad"
 
-imagen: "/imagenes/ruda.png"
+imagen: "/imagenes/ruda.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

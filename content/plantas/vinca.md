@@ -74,7 +74,7 @@ contraindicaciones:
   - "Niños"
 toxicidad: "Planta tóxica; los alcaloides son citotóxicos en dosis no controladas"
 
-imagen: "/imagenes/vinca.png"
+imagen: "/imagenes/vinca.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "diciembre a febrero"

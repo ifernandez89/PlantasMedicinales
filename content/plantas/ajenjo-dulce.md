@@ -27,7 +27,7 @@ precauciones:
   - "No consumir por períodos prolongados."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/ajenjo_dulce.png"
+imagen: "/imagenes/ajenjo_dulce.webp"
 imagenes: []
 epocaFloracion: "enero a marzo (fotoperíodo corto)"
 epocaFructificacion: "marzo a mayo"

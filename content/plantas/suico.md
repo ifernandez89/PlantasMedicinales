@@ -25,7 +25,7 @@ precauciones:
   - "En dosis altas puede ser irritante."
 contraindicaciones: []
 toxicidad: null
-imagen: "/imagenes/suico.png"
+imagen: "/imagenes/suico.webp"
 imagenes: []
 epocaFloracion: "enero a abril (verano)"
 epocaFructificacion: "marzo a junio"

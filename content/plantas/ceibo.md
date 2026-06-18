@@ -96,7 +96,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: "Las semillas contienen alcaloides potencialmente tóxicos"
 
-imagen: "/imagenes/ceibo.png"
+imagen: "/imagenes/ceibo.webp"
 imagenes: []
 epocaFloracion: "enero a marzo"
 epocaFructificacion: "marzo a mayo"

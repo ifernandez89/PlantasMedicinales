@@ -75,7 +75,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: null
 
-imagen: "/imagenes/equinacea.png"
+imagen: "/imagenes/equinacea.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "febrero a abril"
