@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import Link from "next/link";
 import NavMobile from "@/components/NavMobile";
-import InstallPWA from "@/components/InstallPWA";
 import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
@@ -28,12 +27,6 @@ export const metadata: Metadata = {
   },
   description:
     "Un herbarium emocional moderno. Plantas medicinales organizadas por acción terapéutica, sistema corporal y ciclo de vida.",
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Herbarium",
-  },
   formatDetection: {
     telephone: false,
   },
@@ -157,9 +150,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
 
-        {/* PWA Install Prompt */}
-        <InstallPWA />
-        
         {/* Scroll to Top Button */}
         <ScrollToTop />
       </body>
