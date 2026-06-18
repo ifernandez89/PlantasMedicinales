@@ -100,6 +100,9 @@ toxicidad: null
 
 imagen: "/imagenes/chanar.png"
 imagenes: []
+epocaFloracion: "agosto a octubre"
+epocaFructificacion: "noviembre a enero"
+tipoCiclo: "árbol espinoso xerófilo"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

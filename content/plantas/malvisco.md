@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/malvisco.png"
 imagenes: []
+epocaFloracion: "octubre a febrero"
+epocaFructificacion: "diciembre a marzo"
+tipoCiclo: "malvácea nativa perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

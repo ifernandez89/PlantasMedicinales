@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/salvia_de_isla.png"
 imagenes: []
+epocaFloracion: "octubre a marzo (primavera-verano)"
+epocaFructificacion: "enero a abril"
+tipoCiclo: "hierba perenne aromática de zonas húmedas"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/ajenjo_dulce.png"
 imagenes: []
+epocaFloracion: "enero a marzo (fotoperíodo corto)"
+epocaFructificacion: "marzo a mayo"
+tipoCiclo: "hierba anual de verano"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

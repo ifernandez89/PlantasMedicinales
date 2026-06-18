@@ -88,6 +88,9 @@ toxicidad: "El lapachol en altas dosis puede ser tóxico"
 
 imagen: "/imagenes/lapacho.png"
 imagenes: []
+epocaFloracion: "julio a septiembre (previo a hojarse)"
+epocaFructificacion: "octubre a diciembre"
+tipoCiclo: "árbol caducifolio subtropical"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

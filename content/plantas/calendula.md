@@ -114,6 +114,9 @@ toxicidad: null
 
 imagen: "/imagenes/calendula.png"
 imagenes: []
+epocaFloracion: "todo el año (primavera-otoño)"
+epocaFructificacion: "continua"
+tipoCiclo: "hierba anual o bianual"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

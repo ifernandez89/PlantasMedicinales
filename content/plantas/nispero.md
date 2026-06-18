@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/nispero.png"
 imagenes: []
+epocaFloracion: "mayo a julio (otoño-invierno)"
+epocaFructificacion: "agosto a octubre"
+tipoCiclo: "árbol frutal perennifolio"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

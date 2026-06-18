@@ -74,6 +74,9 @@ toxicidad: null
 
 imagen: "/imagenes/escoba-dura.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "febrero a abril"
+tipoCiclo: "arbusto nativo perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

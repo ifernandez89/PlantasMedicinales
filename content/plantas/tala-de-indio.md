@@ -55,6 +55,9 @@ toxicidad: null
 
 imagen: "/imagenes/tala_de_indio.png"
 imagenes: []
+epocaFloracion: "septiembre a noviembre"
+epocaFructificacion: "noviembre a enero"
+tipoCiclo: "arbusto nativo halófito"
 fuentes:
   - titulo: "Herbario 7"
     tipo: "PDF"

@@ -31,6 +31,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/yerba_carnicera.png"
 imagenes: []
+epocaFloracion: "septiembre a febrero"
+epocaFructificacion: "noviembre a abril"
+tipoCiclo: "hierba anual ruderal"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/uña_de_gato.png"
 imagenes: []
+epocaFloracion: "agosto a diciembre"
+epocaFructificacion: "noviembre a marzo"
+tipoCiclo: "liana leñosa de selva tropical"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

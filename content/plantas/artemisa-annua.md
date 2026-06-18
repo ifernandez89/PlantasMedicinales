@@ -90,6 +90,9 @@ toxicidad: "Neurotóxica en dosis muy altas"
 
 imagen: "/imagenes/artemisa-annua.png"
 imagenes: []
+epocaFloracion: "febrero a abril"
+epocaFructificacion: "abril a junio"
+tipoCiclo: "hierba anual de verano"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -77,6 +77,9 @@ toxicidad: null
 
 imagen: "/imagenes/equinacea.png"
 imagenes: []
+epocaFloracion: "diciembre a febrero"
+epocaFructificacion: "febrero a abril"
+tipoCiclo: "hierba perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

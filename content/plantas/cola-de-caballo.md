@@ -94,6 +94,9 @@ toxicidad: "Usar la especie arvense; otras especies del género pueden ser tóxi
 
 imagen: "/imagenes/cola-de-caballo.png"
 imagenes: []
+epocaFloracion: "sin flores (esporófito)"
+epocaFructificacion: "agosto a octubre (esporangio)"
+tipoCiclo: "helecho equisetofita perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

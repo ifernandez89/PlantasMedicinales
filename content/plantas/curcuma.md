@@ -82,6 +82,9 @@ toxicidad: null
 
 imagen: "/imagenes/curcuma.png"
 imagenes: []
+epocaFloracion: "octubre a diciembre"
+epocaFructificacion: "enero a febrero"
+tipoCiclo: "rizoma tropical perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

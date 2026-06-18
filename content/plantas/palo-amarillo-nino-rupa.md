@@ -76,6 +76,9 @@ toxicidad: null
 
 imagen: "/imagenes/palo_amarillo_nino_rupa.png"
 imagenes: []
+epocaFloracion: "septiembre a noviembre"
+epocaFructificacion: "noviembre a enero"
+tipoCiclo: "arbusto nativo aromático"
 fuentes:
   - titulo: "Herbario 7"
     tipo: "PDF"

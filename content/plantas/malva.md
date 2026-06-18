@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/malva.png"
 imagenes: []
+epocaFloracion: "octubre a marzo (primavera-verano)"
+epocaFructificacion: "diciembre a abril"
+tipoCiclo: "hierba bienal o perenne de corta duración"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -78,6 +78,9 @@ toxicidad: "Los frutos pueden ser tóxicos para aves pequeñas en grandes cantid
 
 imagen: "/imagenes/aguaribay.png"
 imagenes: []
+epocaFloracion: "agosto a noviembre"
+epocaFructificacion: "diciembre a marzo"
+tipoCiclo: "árbol perennifolio andino"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

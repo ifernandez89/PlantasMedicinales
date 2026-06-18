@@ -104,6 +104,9 @@ toxicidad: null
 
 imagen: "/imagenes/menta.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a marzo"
+tipoCiclo: "hierba estolonante perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

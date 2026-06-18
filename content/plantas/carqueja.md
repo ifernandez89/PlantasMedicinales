@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/carqueja.png"
 imagenes: []
+epocaFloracion: "enero a mayo (verano-otoño)"
+epocaFructificacion: "marzo a junio"
+tipoCiclo: "arbusto perenne de tallos alados"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

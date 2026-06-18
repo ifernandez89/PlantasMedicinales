@@ -26,6 +26,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/sen_de_campo.png"
 imagenes: []
+epocaFloracion: "enero a mayo (verano-otoño)"
+epocaFructificacion: "marzo a junio"
+tipoCiclo: "arbusto perenne o semiperenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

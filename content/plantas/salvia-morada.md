@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/salvia_morada.png"
 imagenes: []
+epocaFloracion: "octubre a abril (primavera a otoño)"
+epocaFructificacion: "diciembre a mayo"
+tipoCiclo: "hierba perenne aromática"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

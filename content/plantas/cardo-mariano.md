@@ -82,6 +82,9 @@ toxicidad: null
 
 imagen: "/imagenes/cardo-mariano.png"
 imagenes: []
+epocaFloracion: "octubre a diciembre"
+epocaFructificacion: "enero a febrero"
+tipoCiclo: "hierba bianual"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

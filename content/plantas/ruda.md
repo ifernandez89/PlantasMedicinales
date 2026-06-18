@@ -94,6 +94,9 @@ toxicidad: "Tóxica en dosis altas; puede causar nefrotoxicidad y hepatotoxicida
 
 imagen: "/imagenes/ruda.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a marzo"
+tipoCiclo: "subarbusto perenne aromático"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

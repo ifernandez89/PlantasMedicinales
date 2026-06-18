@@ -643,6 +643,113 @@
         "Antidiarreica",
         "Hipotensora"
       ]
+    },
+    {
+      "nombre": "Sarandí Blanco",
+      "slug": "sarandi-blanco",
+      "acciones": [
+        "Febrífuga",
+        "Tónica",
+        "Antiséptica",
+        "Cicatrizante"
+      ]
+    },
+    {
+      "nombre": "Guaycurú",
+      "slug": "guaycuru",
+      "acciones": [
+        "Astringente",
+        "Antidisentérica",
+        "Hipotensora"
+      ]
+    },
+    {
+      "nombre": "Marcelo (o Marcelita)",
+      "slug": "marcela-marcelita",
+      "acciones": [
+        "Digestiva",
+        "Antiinflamatoria",
+        "Hepatoprotectora"
+      ]
+    },
+    {
+      "nombre": "Sangre de Drago (o Sangre de Grado)",
+      "slug": "sangre-de-drago",
+      "acciones": [
+        "Cicatrizante",
+        "Antiulcerosa",
+        "Antiviral"
+      ]
+    },
+    {
+      "nombre": "Ubajay",
+      "slug": "ubajay",
+      "acciones": [
+        "Diurética",
+        "Depurativa"
+      ]
+    },
+    {
+      "nombre": "Jacarandá",
+      "slug": "jacaranda",
+      "acciones": [
+        "Purificadora",
+        "Antiséptica"
+      ]
+    },
+    {
+      "nombre": "Totora",
+      "slug": "totora",
+      "acciones": [
+        "Nutritiva",
+        "Reconstituyente"
+      ]
+    },
+    {
+      "nombre": "Sauco",
+      "slug": "sauco",
+      "acciones": [
+        "Febrífuga",
+        "Antiinflamatoria",
+        "Antidiarreica",
+        "Depurativa"
+      ]
+    },
+    {
+      "nombre": "Ambay",
+      "slug": "ambay",
+      "acciones": [
+        "Antitusiva",
+        "Expectorante",
+        "Espasmolítica"
+      ]
+    },
+    {
+      "nombre": "Anacahuita",
+      "slug": "anacahuita",
+      "acciones": [
+        "Expectorante",
+        "Pectoral",
+        "Antiséptica"
+      ]
+    },
+    {
+      "nombre": "Tuna",
+      "slug": "tuna",
+      "acciones": [
+        "Emoliente",
+        "Cicatrizante",
+        "Antiinflamatoria"
+      ]
+    },
+    {
+      "nombre": "Sauce",
+      "slug": "sauce",
+      "acciones": [
+        "Analgésica",
+        "Antirreumática",
+        "Antiséptica"
+      ]
     }
   ]
 }

@@ -26,6 +26,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/heliotropo.png"
 imagenes: []
+epocaFloracion: "octubre a febrero"
+epocaFructificacion: "diciembre a abril"
+tipoCiclo: "hierba rastrera halófita"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

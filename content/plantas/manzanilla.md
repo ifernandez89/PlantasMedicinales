@@ -96,6 +96,9 @@ toxicidad: null
 
 imagen: "/imagenes/manzanilla.png"
 imagenes: []
+epocaFloracion: "octubre a enero"
+epocaFructificacion: "diciembre a febrero"
+tipoCiclo: "hierba anual aromática"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

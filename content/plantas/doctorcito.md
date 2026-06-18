@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/doctorcito.png"
 imagenes: []
+epocaFloracion: "octubre a enero"
+epocaFructificacion: "diciembre a marzo"
+tipoCiclo: "arbusto nativo perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -82,6 +82,9 @@ toxicidad: null
 
 imagen: "/imagenes/laurel.png"
 imagenes: []
+epocaFloracion: "marzo a mayo"
+epocaFructificacion: "junio a agosto"
+tipoCiclo: "árbol perennifolio mediterráneo"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

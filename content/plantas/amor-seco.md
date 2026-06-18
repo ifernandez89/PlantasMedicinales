@@ -69,6 +69,9 @@ toxicidad: null
 
 imagen: "/imagenes/amor-seco.png"
 imagenes: []
+epocaFloracion: "febrero a mayo"
+epocaFructificacion: "mayo a julio"
+tipoCiclo: "hierba anual adaptógena"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

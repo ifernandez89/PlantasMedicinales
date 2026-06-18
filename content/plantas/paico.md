@@ -98,6 +98,9 @@ toxicidad: "El ascaridol es tóxico en dosis altas; usar dosis moderadas"
 
 imagen: "/imagenes/paico.png"
 imagenes: []
+epocaFloracion: "enero a abril"
+epocaFructificacion: "marzo a junio"
+tipoCiclo: "hierba anual ruderal"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

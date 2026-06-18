@@ -80,6 +80,9 @@ toxicidad: null
 
 imagen: "/imagenes/caa_piqui.png"
 imagenes: []
+epocaFloracion: "marzo a mayo (otoño)"
+epocaFructificacion: "mayo a julio"
+tipoCiclo: "hierba rastrera anual"
 fuentes:
   - titulo: "Herbario 7"
     tipo: "PDF"

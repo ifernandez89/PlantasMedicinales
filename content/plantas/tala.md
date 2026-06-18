@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/tala.png"
 imagenes: []
+epocaFloracion: "agosto a octubre"
+epocaFructificacion: "octubre a enero"
+tipoCiclo: "árbol espinoso nativo perennifolio"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

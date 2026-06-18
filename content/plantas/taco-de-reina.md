@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/taco_de_reina.png"
 imagenes: []
+epocaFloracion: "octubre a marzo"
+epocaFructificacion: "diciembre a abril"
+tipoCiclo: "hierba anual trepadora"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/cerraja.png"
 imagenes: []
+epocaFloracion: "casi todo el año (picos en primavera-verano)"
+epocaFructificacion: "continua"
+tipoCiclo: "hierba anual o bienal"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

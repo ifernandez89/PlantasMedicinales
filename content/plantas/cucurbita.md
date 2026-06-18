@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/cucurbita.png"
 imagenes: []
+epocaFloracion: "noviembre a febrero (primavera-verano)"
+epocaFructificacion: "enero a abril"
+tipoCiclo: "planta trepadora anual cultivada"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

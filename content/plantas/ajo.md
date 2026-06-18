@@ -87,6 +87,9 @@ toxicidad: null
 
 imagen: "/imagenes/ajo.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a febrero"
+tipoCiclo: "bulbo herbáceo anual"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

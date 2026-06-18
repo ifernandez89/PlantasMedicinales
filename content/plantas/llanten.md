@@ -111,6 +111,9 @@ toxicidad: null
 
 imagen: "/imagenes/llanten.png"
 imagenes: []
+epocaFloracion: "octubre a marzo"
+epocaFructificacion: "enero a mayo"
+tipoCiclo: "hierba perenne de roseta"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

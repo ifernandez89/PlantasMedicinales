@@ -97,6 +97,9 @@ toxicidad: null
 
 imagen: "/imagenes/ortiga.png"
 imagenes: []
+epocaFloracion: "septiembre a enero"
+epocaFructificacion: "noviembre a marzo"
+tipoCiclo: "hierba anual o perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

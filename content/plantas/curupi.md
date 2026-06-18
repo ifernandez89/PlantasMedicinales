@@ -26,6 +26,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/curupi.png"
 imagenes: []
+epocaFloracion: "septiembre a diciembre (primavera)"
+epocaFructificacion: "enero a marzo"
+tipoCiclo: "árbol nativo ribereño"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

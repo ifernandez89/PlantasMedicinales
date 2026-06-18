@@ -29,6 +29,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/catay.png"
 imagenes: []
+epocaFloracion: "diciembre a abril (verano-otoño)"
+epocaFructificacion: "febrero a mayo"
+tipoCiclo: "hierba palustre perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

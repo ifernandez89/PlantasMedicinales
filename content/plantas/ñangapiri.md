@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/ñangapiri.png"
 imagenes: []
+epocaFloracion: "septiembre a noviembre"
+epocaFructificacion: "noviembre a enero"
+tipoCiclo: "arbusto frutal nativo perennifolio"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/altamisa.png"
 imagenes: []
+epocaFloracion: "diciembre a marzo (verano)"
+epocaFructificacion: "febrero a abril"
+tipoCiclo: "hierba anual ruderal"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

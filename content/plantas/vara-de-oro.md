@@ -85,6 +85,9 @@ toxicidad: null
 
 imagen: "/imagenes/vara-de-oro.png"
 imagenes: []
+epocaFloracion: "enero a abril"
+epocaFructificacion: "abril a junio"
+tipoCiclo: "hierba perenne invasora"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -95,6 +95,9 @@ toxicidad: null
 
 imagen: "/imagenes/lavanda.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a febrero"
+tipoCiclo: "arbusto perenne aromático"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -54,6 +54,11 @@ export interface Planta {
   imagenes: string[];
   fuentes: Fuente[];
 
+  // Ciclo y Porte
+  epocaFloracion: string | null;
+  epocaFructificacion: string | null;
+  tipoCiclo: string | null;
+
   // Contenido Markdown procesado
   descripcionHtml: string;
 }
@@ -132,6 +137,10 @@ export async function getPlantaBySlug(slug: string): Promise<Planta> {
           año: typeof f?.año === "number" ? f.año : undefined,
         }))
       : [],
+
+    epocaFloracion:     data.epocaFloracion ? String(data.epocaFloracion) : null,
+    epocaFructificacion: data.epocaFructificacion ? String(data.epocaFructificacion) : null,
+    tipoCiclo:          data.tipoCiclo ? String(data.tipoCiclo) : null,
 
     descripcionHtml:    processed.toString(),
   };

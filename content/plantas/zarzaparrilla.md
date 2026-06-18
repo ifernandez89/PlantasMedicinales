@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/zarzaparrilla.png"
 imagenes: []
+epocaFloracion: "septiembre a noviembre"
+epocaFructificacion: "diciembre a febrero"
+tipoCiclo: "enredadera perenne nativa"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

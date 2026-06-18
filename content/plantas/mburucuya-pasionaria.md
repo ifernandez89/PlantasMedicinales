@@ -32,6 +32,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/mburucuya_pasionaria.png"
 imagenes: []
+epocaFloracion: "octubre a mayo (primavera a otoño)"
+epocaFructificacion: "enero a junio"
+tipoCiclo: "enredadera leñosa perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

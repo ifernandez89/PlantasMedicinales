@@ -96,6 +96,9 @@ toxicidad: null
 
 imagen: "/imagenes/diente-de-leon.png"
 imagenes: []
+epocaFloracion: "agosto a mayo (casi todo el año)"
+epocaFructificacion: "continua"
+tipoCiclo: "hierba perenne roseta"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/salvia_guaranitica.png"
 imagenes: []
+epocaFloracion: "noviembre a mayo"
+epocaFructificacion: "enero a junio"
+tipoCiclo: "subarbusto perenne nativo"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

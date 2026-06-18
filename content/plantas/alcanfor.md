@@ -30,6 +30,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/alcanfor.png"
 imagenes: []
+epocaFloracion: "septiembre a noviembre (primavera)"
+epocaFructificacion: "diciembre a febrero"
+tipoCiclo: "árbol perennifolio subtropical"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

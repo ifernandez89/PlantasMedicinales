@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/yuyo_colorado.png"
 imagenes: []
+epocaFloracion: "diciembre a marzo"
+epocaFructificacion: "febrero a mayo"
+tipoCiclo: "hierba anual comestible"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

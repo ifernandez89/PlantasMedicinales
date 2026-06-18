@@ -27,6 +27,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/suico.png"
 imagenes: []
+epocaFloracion: "enero a abril (verano)"
+epocaFructificacion: "marzo a junio"
+tipoCiclo: "hierba anual aromática"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

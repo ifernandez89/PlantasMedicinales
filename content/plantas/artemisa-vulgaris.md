@@ -28,6 +28,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/artemisa_vulgaris.png"
 imagenes: []
+epocaFloracion: "enero a abril (verano-otoño)"
+epocaFructificacion: "marzo a mayo"
+tipoCiclo: "hierba perenne rizomatosa"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

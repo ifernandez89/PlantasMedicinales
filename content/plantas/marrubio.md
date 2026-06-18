@@ -76,6 +76,9 @@ toxicidad: null
 
 imagen: "/imagenes/marrubio.png"
 imagenes: []
+epocaFloracion: "octubre a diciembre"
+epocaFructificacion: "diciembre a febrero"
+tipoCiclo: "hierba perenne"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

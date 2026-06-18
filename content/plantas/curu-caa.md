@@ -26,6 +26,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/curu_caa.png"
 imagenes: []
+epocaFloracion: "noviembre a febrero"
+epocaFructificacion: "enero a abril"
+tipoCiclo: "planta trepadora nativa"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

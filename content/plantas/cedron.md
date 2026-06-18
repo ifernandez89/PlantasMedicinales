@@ -67,6 +67,9 @@ toxicidad: null
 
 imagen: "/imagenes/cedron.png"
 imagenes: []
+epocaFloracion: "diciembre a febrero"
+epocaFructificacion: "marzo a abril"
+tipoCiclo: "arbusto caducifolio aromático"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

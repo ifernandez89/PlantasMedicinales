@@ -87,6 +87,9 @@ toxicidad: null
 
 imagen: "/imagenes/pezuna-de-vaca.png"
 imagenes: []
+epocaFloracion: "agosto a octubre"
+epocaFructificacion: "noviembre a enero"
+tipoCiclo: "árbol caducifolio tropical"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

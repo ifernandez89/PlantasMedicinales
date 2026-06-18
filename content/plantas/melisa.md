@@ -67,6 +67,9 @@ toxicidad: null
 
 imagen: "/imagenes/melisa.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a marzo"
+tipoCiclo: "hierba perenne aromática"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

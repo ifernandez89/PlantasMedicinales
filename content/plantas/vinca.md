@@ -76,6 +76,9 @@ toxicidad: "Planta tóxica; los alcaloides son citotóxicos en dosis no controla
 
 imagen: "/imagenes/vinca.png"
 imagenes: []
+epocaFloracion: "octubre a diciembre"
+epocaFructificacion: "diciembre a febrero"
+tipoCiclo: "hierba anual de uso medicinal"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

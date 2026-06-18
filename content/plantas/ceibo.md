@@ -98,6 +98,9 @@ toxicidad: "Las semillas contienen alcaloides potencialmente tóxicos"
 
 imagen: "/imagenes/ceibo.png"
 imagenes: []
+epocaFloracion: "enero a marzo"
+epocaFructificacion: "marzo a mayo"
+tipoCiclo: "árbol ribereño caducifolio"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

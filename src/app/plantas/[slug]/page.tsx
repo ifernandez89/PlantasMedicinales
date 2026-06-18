@@ -138,6 +138,44 @@ export default async function PlantaPage({
               </div>
             )}
 
+            {/* Ciclo anual y Porte */}
+            {(planta.epocaFloracion || planta.epocaFructificacion || planta.tipoCiclo) && (
+              <div className="card-herbarium p-5 bg-hueso-100/40 border-hueso-200/80 rounded-xl space-y-4">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-humo-400">
+                  Ciclo anual y Porte
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-body text-humo-600">
+                  {planta.tipoCiclo && (
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl text-salvia-500">🌿</span>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider text-humo-400 font-medium leading-none">Tipo</p>
+                        <p className="font-light mt-1 text-humo-700">{planta.tipoCiclo}</p>
+                      </div>
+                    </div>
+                  )}
+                  {planta.epocaFloracion && (
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl text-petal-500">🌸</span>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider text-humo-400 font-medium leading-none">Floración</p>
+                        <p className="font-light mt-1 text-humo-700">{planta.epocaFloracion}</p>
+                      </div>
+                    </div>
+                  )}
+                  {planta.epocaFructificacion && (
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl text-humo-400">🍂</span>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider text-humo-400 font-medium leading-none">Fructificación</p>
+                        <p className="font-light mt-1 text-humo-700">{planta.epocaFructificacion}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Acciones */}
             <div>
               <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-3">

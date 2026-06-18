@@ -27,6 +27,9 @@ contraindicaciones: []
 toxicidad: null
 imagen: "/imagenes/santa_lucia.png"
 imagenes: []
+epocaFloracion: "octubre a marzo (meses cálidos)"
+epocaFructificacion: "noviembre a abril"
+tipoCiclo: "hierba perenne rizomatosa"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"

@@ -87,6 +87,9 @@ toxicidad: null
 
 imagen: "/imagenes/cebolla.png"
 imagenes: []
+epocaFloracion: "noviembre a enero"
+epocaFructificacion: "enero a febrero"
+tipoCiclo: "bulbo bianual cultivado"
 fuentes:
   - titulo: "Acción Terapéutica"
     tipo: "PDF"
