@@ -1,50 +1,132 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import Link from "next/link";
+import NavMobile from "@/components/NavMobile";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-jost",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Plantas Medicinales",
-    default: "Plantas Medicinales",
+    template: "%s — Herbarium",
+    default: "Herbarium · Plantas Medicinales",
   },
   description:
-    "Registro de plantas medicinales organizadas por acción terapéutica, sistema corporal y uso tradicional.",
+    "Un herbarium emocional moderno. Plantas medicinales organizadas por acción terapéutica, sistema corporal y ciclo de vida.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const navLinks = [
+  { href: "/plantas",    label: "Plantas" },
+  { href: "/afecciones", label: "Afecciones" },
+  { href: "/acciones",   label: "Acciones" },
+  { href: "/sistemas",   label: "Sistemas" },
+];
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${cormorant.variable} ${jost.variable}`}>
       <body>
-        <header className="bg-verde-700 text-white shadow-md">
-          <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold tracking-tight hover:opacity-90">
-              🌿 Plantas Medicinales
+        {/* ─── Header ──────────────────────────────────────────────── */}
+        <header className="fixed top-0 left-0 right-0 z-50
+                           bg-hueso-50/80 backdrop-blur-md
+                           border-b border-hueso-200/60">
+          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+            {/* Logo */}
+            <Link href="/" className="group flex items-center gap-3">
+              <span className="text-salvia-500 text-lg transition-transform duration-600
+                               group-hover:rotate-45 inline-block">
+                ✦
+              </span>
+              <span className="font-display text-lg font-light tracking-[0.2em] text-humo-800 uppercase">
+                Herbarium
+              </span>
             </Link>
-            <nav className="flex gap-5 text-sm font-medium">
-              <Link href="/plantas" className="hover:underline underline-offset-4">
-                Plantas
-              </Link>
-              <Link href="/afecciones" className="hover:underline underline-offset-4">
-                Afecciones
-              </Link>
-              <Link href="/acciones" className="hover:underline underline-offset-4">
-                Acciones
-              </Link>
-              <Link href="/sistemas" className="hover:underline underline-offset-4">
-                Sistemas
-              </Link>
+
+            {/* Nav desktop */}
+            <nav className="hidden sm:flex items-center gap-8" aria-label="Navegación principal">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-body text-sm font-light tracking-wide text-humo-500
+                             hover:text-salvia-600 transition-colors duration-300
+                             relative after:absolute after:-bottom-0.5 after:left-0 after:right-0
+                             after:h-px after:bg-salvia-400 after:scale-x-0
+                             hover:after:scale-x-100 after:transition-transform after:duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
+
+            {/* Nav mobile */}
+            <NavMobile />
           </div>
         </header>
 
-        <main className="max-w-5xl mx-auto px-4 py-10">{children}</main>
+        {/* ─── Main ────────────────────────────────────────────────── */}
+        <main className="pt-16 min-h-screen">
+          <div className="max-w-6xl mx-auto px-6 py-12">
+            {children}
+          </div>
+        </main>
 
-        <footer className="text-center text-xs text-gray-400 py-8 mt-10 border-t border-gray-200">
-          Plantas Medicinales — solo con fines informativos
+        {/* ─── Footer ──────────────────────────────────────────────── */}
+        <footer className="border-t border-hueso-200 mt-24">
+          <div className="max-w-6xl mx-auto px-6 py-12
+                          flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="text-center sm:text-left space-y-1">
+              <p className="font-display text-xl font-light italic text-humo-500">
+                Herbarium
+              </p>
+              <p className="font-body text-xs text-humo-400">
+                Solo con fines informativos · No reemplaza consejo médico
+              </p>
+            </div>
+
+            {/* Ciclo en el footer */}
+            <div className="flex items-center gap-3 text-humo-300">
+              <span className="font-body text-xs tracking-[0.2em] uppercase text-humo-400">
+                🌱 brote
+              </span>
+              <span className="w-12 h-px bg-gradient-to-r from-salvia-200 via-petal-200 to-humo-200" />
+              <span className="font-body text-xs tracking-[0.2em] uppercase text-humo-400">
+                🌸 floración
+              </span>
+              <span className="w-12 h-px bg-gradient-to-r from-petal-200 via-lavanda-200 to-humo-200" />
+              <span className="font-body text-xs tracking-[0.2em] uppercase text-humo-400">
+                🍂 marchitez
+              </span>
+            </div>
+
+            {/* Links del footer */}
+            <nav className="flex gap-6" aria-label="Links del footer">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-body text-xs text-humo-400 hover:text-salvia-500
+                             transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </footer>
       </body>
     </html>

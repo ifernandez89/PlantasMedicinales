@@ -4,13 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSlugs, getPlantaBySlug } from "@/lib/plantas";
 
-// ─── Static params ────────────────────────────────────────────────────────────
-
 export async function generateStaticParams() {
   return getSlugs().map((slug) => ({ slug }));
 }
-
-// ─── Metadata dinámica ────────────────────────────────────────────────────────
 
 export async function generateMetadata({
   params,
@@ -22,14 +18,25 @@ export async function generateMetadata({
     const planta = await getPlantaBySlug(slug);
     return {
       title: planta.nombre,
-      description: `Usos medicinales, acciones terapéuticas y sistemas corporales de ${planta.nombre}.`,
+      description: `${planta.nombre} — usos medicinales, acciones terapéuticas y ciclo vital.`,
     };
   } catch {
     return { title: "Planta no encontrada" };
   }
 }
 
-// ─── Página ───────────────────────────────────────────────────────────────────
+// Ciclo visual según planta
+function getCiclo(planta: Awaited<ReturnType<typeof getPlantaBySlug>>) {
+  if (planta.toxicidad || planta.contraindicaciones.length > 2) return "marchitez" as const;
+  if (planta.accionesTerapeuticas.length >= 4)                   return "floracion"  as const;
+  return "brote" as const;
+}
+
+const cicloMeta = {
+  brote:     { icon: "🌱", label: "Brote",     accentBg: "bg-salvia-500",  textColor: "text-salvia-600" },
+  floracion: { icon: "🌸", label: "Floración", accentBg: "bg-petal-400",   textColor: "text-petal-500" },
+  marchitez: { icon: "🍂", label: "Precaución",accentBg: "bg-humo-400",    textColor: "text-humo-500" },
+};
 
 export default async function PlantaPage({
   params,
@@ -45,118 +52,175 @@ export default async function PlantaPage({
     notFound();
   }
 
+  const ciclo = getCiclo(planta);
+  const cm    = cicloMeta[ciclo];
+
   return (
-    <article className="space-y-10">
-      {/* Encabezado */}
-      <header className="space-y-3">
-        <Link href="/plantas" className="text-sm text-verde-700 hover:underline">
-          ← Volver a plantas
+    <article className="space-y-16">
+
+      {/* ── Hero lámina botánica ──────────────────────────────────── */}
+      <section className="bloom-1">
+        <Link href="/plantas"
+              className="inline-flex items-center gap-2 font-body text-xs
+                         tracking-widest uppercase text-humo-400
+                         hover:text-salvia-500 transition-colors duration-300 mb-8">
+          ← Volver al registro
         </Link>
 
-        <div className="flex flex-col sm:flex-row gap-6 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+
           {/* Imagen */}
           {planta.imagen && (
-            <div className="relative w-full sm:w-48 h-48 rounded-2xl overflow-hidden flex-shrink-0 bg-verde-100">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden
+                            shadow-2xl shadow-humo-900/20">
               <Image
                 src={planta.imagen}
                 alt={planta.nombre}
                 fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, 192px"
+                className={`object-cover transition-all duration-[2000ms] ease-out
+                            hover:scale-105
+                            ${ciclo === "marchitez" ? "saturate-75" : ""}`}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
+              {/* Overlay sutil */}
+              <div className="absolute inset-0 bg-gradient-to-t
+                              from-humo-900/40 via-transparent to-transparent" />
+
+              {/* Numero de acciones (detalle editorial) */}
+              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                <span className={`font-display text-6xl font-light text-hueso-50/30 leading-none`}>
+                  {String(planta.accionesTerapeuticas.length).padStart(2, "0")}
+                </span>
+                <span className={`font-body text-xs tracking-widest uppercase ${cm.textColor}
+                                  bg-hueso-50/90 backdrop-blur-sm px-3 py-1.5 rounded-full`}>
+                  {cm.icon} {cm.label}
+                </span>
+              </div>
             </div>
           )}
 
-          <div className="space-y-2 flex-1">
-            <h1 className="text-4xl font-bold text-verde-900">{planta.nombre}</h1>
-            {planta.nombreCientifico && (
-              <p className="text-gray-400 italic">{planta.nombreCientifico}</p>
-            )}
-            {planta.familia && (
-              <p className="text-sm text-gray-500">
-                <span className="font-medium">Familia:</span> {planta.familia}
-              </p>
-            )}
-            {planta.origen && (
-              <p className="text-sm text-gray-500">
-                <span className="font-medium">Origen:</span> {planta.origen}
-              </p>
-            )}
-            {planta.otrosNombres.length > 0 && (
-              <p className="text-sm text-gray-500">
-                <span className="font-medium">También:</span>{" "}
-                {planta.otrosNombres.join(", ")}
-              </p>
+          {/* Info principal */}
+          <div className="space-y-6 pt-4">
+
+            {/* Clasificación */}
+            <div className="space-y-1">
+              {planta.familia && (
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400">
+                  {planta.familia}
+                </p>
+              )}
+              <h1 className="font-display text-5xl sm:text-6xl font-light text-humo-800 leading-tight">
+                {planta.nombre}
+              </h1>
+              {planta.nombreCientifico && (
+                <p className="font-display text-xl italic font-light text-humo-400">
+                  {planta.nombreCientifico}
+                </p>
+              )}
+            </div>
+
+            {/* Metadata geográfica */}
+            {(planta.origen || planta.distribucion.length > 0) && (
+              <div className="space-y-2 text-sm font-body text-humo-500">
+                {planta.origen && (
+                  <p><span className="text-humo-300">Origen ·</span> {planta.origen}</p>
+                )}
+                {planta.distribucion.length > 0 && (
+                  <p><span className="text-humo-300">Distribución ·</span> {planta.distribucion.join(", ")}</p>
+                )}
+                {planta.habitat && (
+                  <p><span className="text-humo-300">Hábitat ·</span> {planta.habitat}</p>
+                )}
+              </div>
             )}
 
-            {/* Acciones globales */}
-            <div className="flex flex-wrap gap-2 pt-1">
-              {planta.acciones.map((a) => (
-                <Link key={a} href={`/acciones/${encodeURIComponent(a)}`}>
-                  <span className="badge-accion cursor-pointer hover:bg-verde-200">
-                    {a}
-                  </span>
-                </Link>
-              ))}
+            {/* Acciones */}
+            <div>
+              <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-3">
+                Acciones terapéuticas
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {planta.acciones.map((a) => (
+                  <Link key={a} href={`/acciones/${encodeURIComponent(a)}`}>
+                    <span className="badge-accion">{a}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
+
+            {/* Sistemas */}
+            {planta.sistemas.length > 0 && (
+              <div>
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-3">
+                  Sistemas corporales
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {planta.sistemas.map((s) => (
+                    <span key={s} className="badge-sistema">{s}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Acento de ciclo */}
+            <div className={`h-1 w-24 rounded-full ${cm.accentBg} opacity-60`} />
           </div>
         </div>
-      </header>
+      </section>
 
-      {/* Descripción */}
+      <hr className="divider-organic" />
+
+      {/* ── Descripción ──────────────────────────────────────────── */}
       {planta.descripcionHtml && (
-        <section className="prose prose-green max-w-none">
-          <div dangerouslySetInnerHTML={{ __html: planta.descripcionHtml }} />
+        <section className="bloom-2 max-w-2xl">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-6">
+            Descripción
+          </p>
+          <div
+            className="prose-botanico"
+            dangerouslySetInnerHTML={{ __html: planta.descripcionHtml }}
+          />
         </section>
       )}
 
-      {/* Acciones terapéuticas detalladas */}
+      {/* ── Acciones terapéuticas detalladas ─────────────────────── */}
       {planta.accionesTerapeuticas.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-verde-900">
-            Acciones terapéuticas
-          </h2>
+        <section className="bloom-3">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-6">
+            Detalle terapéutico
+          </p>
           <div className="grid sm:grid-cols-2 gap-4">
-            {planta.accionesTerapeuticas.map((at) => (
-              <div key={at.accion} className="card-planta space-y-3">
-                <h3 className="font-semibold text-verde-700 text-lg">
+            {planta.accionesTerapeuticas.map((at, i) => (
+              <div key={at.accion}
+                   className={`card-herbarium p-5 space-y-4 bloom-${Math.min(i + 1, 6)}`}>
+                <h3 className="font-display text-xl font-light text-humo-800">
                   {at.accion}
                 </h3>
 
                 {at.sistemas.length > 0 && (
-                  <div>
-                    <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">
-                      Sistemas
-                    </p>
-                    <div className="flex flex-wrap gap-1">
-                      {at.sistemas.map((s) => (
-                        <span key={s} className="badge-sistema">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-1">
+                    {at.sistemas.map((s) => (
+                      <span key={s} className="badge-sistema">{s}</span>
+                    ))}
                   </div>
                 )}
 
                 {at.afecciones.length > 0 && (
-                  <div>
-                    <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">
-                      Afecciones
-                    </p>
-                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-0.5">
-                      {at.afecciones.map((af) => (
-                        <li key={af}>
-                          <Link
-                            href={`/afecciones/${encodeURIComponent(af)}`}
-                            className="hover:text-verde-700 hover:underline"
-                          >
-                            {af}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-1">
+                    {at.afecciones.map((af) => (
+                      <li key={af}>
+                        <Link href={`/afecciones/${encodeURIComponent(af)}`}
+                              className="font-body text-sm text-humo-500
+                                         hover:text-salvia-600 transition-colors duration-300
+                                         flex items-center gap-2 group">
+                          <span className="w-1 h-1 rounded-full bg-salvia-300
+                                           group-hover:bg-salvia-500 transition-colors" />
+                          {af}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             ))}
@@ -164,104 +228,115 @@ export default async function PlantaPage({
         </section>
       )}
 
-      {/* Info botánica / etnobotánica */}
-      {(planta.principiosActivos.length > 0 ||
-        planta.usosEtnobotanicos.length > 0 ||
-        planta.polinizadores.length > 0) && (
-        <section className="grid sm:grid-cols-3 gap-4">
-          {planta.principiosActivos.length > 0 && (
-            <div className="card-planta space-y-2">
-              <h3 className="font-semibold text-verde-800 text-sm uppercase tracking-wide">
-                Principios activos
-              </h3>
-              <ul className="text-sm text-gray-600 space-y-0.5">
-                {planta.principiosActivos.map((p) => (
-                  <li key={p}>• {p}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {planta.usosEtnobotanicos.length > 0 && (
-            <div className="card-planta space-y-2">
-              <h3 className="font-semibold text-verde-800 text-sm uppercase tracking-wide">
-                Etnobotánica
-              </h3>
-              <ul className="text-sm text-gray-600 space-y-0.5">
-                {planta.usosEtnobotanicos.map((u) => (
-                  <li key={u}>• {u}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {planta.polinizadores.length > 0 && (
-            <div className="card-planta space-y-2">
-              <h3 className="font-semibold text-verde-800 text-sm uppercase tracking-wide">
-                Polinizadores
-              </h3>
-              <ul className="text-sm text-gray-600 space-y-0.5">
-                {planta.polinizadores.map((p) => (
-                  <li key={p}>• {p}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+      {/* ── Info botánica ─────────────────────────────────────────── */}
+      {(planta.principiosActivos.length > 0 || planta.usosEtnobotanicos.length > 0 || planta.polinizadores.length > 0) && (
+        <section className="bloom-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-6">
+            Botánica y etnobotánica
+          </p>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {planta.principiosActivos.length > 0 && (
+              <div className="card-herbarium p-5 space-y-3">
+                <h3 className="font-display text-base italic text-humo-600">Principios activos</h3>
+                <ul className="space-y-1">
+                  {planta.principiosActivos.map((p) => (
+                    <li key={p} className="font-body text-sm text-humo-500 flex items-center gap-2">
+                      <span className="text-salvia-300 text-xs">·</span>{p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {planta.usosEtnobotanicos.length > 0 && (
+              <div className="card-herbarium p-5 space-y-3">
+                <h3 className="font-display text-base italic text-humo-600">Etnobotánica</h3>
+                <ul className="space-y-1">
+                  {planta.usosEtnobotanicos.map((u) => (
+                    <li key={u} className="font-body text-sm text-humo-500 flex items-start gap-2">
+                      <span className="text-petal-300 text-xs mt-1">·</span>{u}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {planta.polinizadores.length > 0 && (
+              <div className="card-herbarium p-5 space-y-3">
+                <h3 className="font-display text-base italic text-humo-600">Polinizadores</h3>
+                <ul className="space-y-1">
+                  {planta.polinizadores.map((p) => (
+                    <li key={p} className="font-body text-sm text-humo-500 flex items-center gap-2">
+                      <span className="text-lavanda-300 text-xs">·</span>{p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </section>
       )}
 
-      {/* Precauciones */}
-      {(planta.precauciones.length > 0 ||
-        planta.contraindicaciones.length > 0 ||
-        planta.toxicidad) && (
-        <section className="card-planta border-l-4 border-amber-400 space-y-3">
-          <h2 className="font-semibold text-amber-700">
-            ⚠️ Precauciones y contraindicaciones
-          </h2>
-          {planta.precauciones.length > 0 && (
-            <ul className="text-sm text-gray-700 list-disc list-inside space-y-0.5">
-              {planta.precauciones.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-          )}
-          {planta.contraindicaciones.length > 0 && (
-            <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
-                Contraindicaciones
-              </p>
-              <div className="flex flex-wrap gap-1">
-                {planta.contraindicaciones.map((c) => (
-                  <span
-                    key={c}
-                    className="bg-amber-100 text-amber-800 text-xs px-2.5 py-1 rounded-full"
-                  >
-                    {c}
-                  </span>
-                ))}
+      {/* ── Precauciones (ciclo marchitez) ───────────────────────── */}
+      {(planta.precauciones.length > 0 || planta.contraindicaciones.length > 0 || planta.toxicidad) && (
+        <section className="bloom-5">
+          <div className="card-herbarium border-humo-300 bg-humo-50/60 p-6 space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🍂</span>
+              <div>
+                <h2 className="font-display text-xl font-light text-humo-700">
+                  Precauciones
+                </h2>
+                <p className="font-body text-xs text-humo-400">
+                  Consultá a un profesional antes de usar
+                </p>
               </div>
             </div>
-          )}
-          {planta.toxicidad && (
-            <p className="text-sm text-red-700 font-medium">
-              🔴 {planta.toxicidad}
-            </p>
-          )}
+
+            {planta.toxicidad && (
+              <p className="font-body text-sm text-petal-600 font-medium
+                             bg-petal-50 border border-petal-200 rounded-xl px-4 py-3">
+                {planta.toxicidad}
+              </p>
+            )}
+
+            {planta.precauciones.length > 0 && (
+              <ul className="space-y-1.5">
+                {planta.precauciones.map((p) => (
+                  <li key={p} className="font-body text-sm text-humo-600 flex items-start gap-2">
+                    <span className="text-humo-300 mt-0.5">·</span>{p}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {planta.contraindicaciones.length > 0 && (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {planta.contraindicaciones.map((c) => (
+                  <span key={c} className="badge-marchitez">{c}</span>
+                ))}
+              </div>
+            )}
+          </div>
         </section>
       )}
 
-      {/* Fuentes */}
+      {/* ── Fuentes ─────────────────────────────────────────────── */}
       {planta.fuentes.length > 0 && (
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-verde-900">Fuentes</h2>
-          <ul className="text-sm text-gray-500 space-y-1">
+        <section className="bloom-6">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-4">
+            Fuentes
+          </p>
+          <ul className="space-y-2">
             {planta.fuentes.map((f: { titulo: string; tipo: string }, i) => (
-              <li key={i}>
-                📄 {f.titulo}{" "}
-                <span className="text-gray-400">({f.tipo})</span>
+              <li key={i} className="font-body text-sm text-humo-400 flex items-center gap-3">
+                <span className="text-salvia-300">·</span>
+                {f.titulo}
+                <span className="text-humo-300 text-xs">({f.tipo})</span>
               </li>
             ))}
           </ul>
         </section>
       )}
+
     </article>
   );
 }

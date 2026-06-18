@@ -1,57 +1,126 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import type { Planta } from "@/lib/plantas";
 
 interface Props {
   planta: Planta;
   priority?: boolean;
+  index?: number;
 }
 
-export default function PlantaCard({ planta, priority = false }: Props) {
+// Determina el ciclo vital según las propiedades de la planta
+function getCicloVital(planta: Planta): "brote" | "floracion" | "marchitez" {
+  if (planta.toxicidad || planta.contraindicaciones.length > 2) return "marchitez";
+  if (planta.accionesTerapeuticas.length >= 4) return "floracion";
+  return "brote";
+}
+
+const cicloConfig = {
+  brote: {
+    icon: "🌱",
+    label: "Brote",
+    overlayClass: "from-salvia-900/60 via-salvia-800/30 to-transparent",
+    badgeClass: "badge-brote",
+    accentClass: "bg-salvia-400",
+  },
+  floracion: {
+    icon: "🌸",
+    label: "Floración",
+    overlayClass: "from-humo-900/70 via-petal-900/20 to-transparent",
+    badgeClass: "badge-floracion",
+    accentClass: "bg-petal-400",
+  },
+  marchitez: {
+    icon: "🍂",
+    label: "Precaución",
+    overlayClass: "from-humo-900/75 via-humo-800/30 to-transparent",
+    badgeClass: "badge-marchitez",
+    accentClass: "bg-humo-400",
+  },
+};
+
+export default function PlantaCard({ planta, priority = false, index = 0 }: Props) {
+  const [hovered, setHovered] = useState(false);
+  const ciclo = getCicloVital(planta);
+  const cfg = cicloConfig[ciclo];
+
   return (
     <Link
       href={`/plantas/${planta.slug}`}
-      className="group bg-white rounded-2xl shadow-sm border border-verde-100 overflow-hidden hover:shadow-md transition-shadow flex flex-col"
+      className={`card-herbarium flex flex-col bloom-${Math.min(index + 1, 6)}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      aria-label={`Ver ${planta.nombre}`}
     >
-      {/* Imagen */}
-      <div className="relative w-full h-44 bg-verde-50 flex-shrink-0">
+      {/* ── Imagen con overlay orgánico ── */}
+      <div className="relative w-full h-52 overflow-hidden">
         {planta.imagen ? (
-          <Image
-            src={planta.imagen}
-            alt={planta.nombre}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            priority={priority}
-          />
+          <>
+            <Image
+              src={planta.imagen}
+              alt={planta.nombre}
+              fill
+              className={`object-cover transition-all duration-800 ease-out ${
+                hovered
+                  ? ciclo === "marchitez"
+                    ? "scale-105 saturate-50 brightness-90"
+                    : "scale-105 brightness-105"
+                  : "scale-100"
+              }`}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority={priority}
+            />
+            {/* Gradient overlay */}
+            <div className={`absolute inset-0 bg-gradient-to-t ${cfg.overlayClass}
+                             transition-opacity duration-600 ${hovered ? "opacity-100" : "opacity-70"}`} />
+          </>
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-5xl text-verde-200">
-            🌿
+          <div className="w-full h-full bg-hueso-200 flex items-center justify-center">
+            <span className="text-5xl opacity-30">{cfg.icon}</span>
           </div>
         )}
-      </div>
 
-      {/* Info */}
-      <div className="p-5 space-y-2 flex-1">
-        <div>
-          <h3 className="font-semibold text-verde-800 text-lg leading-tight">
+        {/* Nombre sobre la imagen */}
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className={`font-display text-2xl font-light text-hueso-50
+                          transition-all duration-400
+                          ${hovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-95"}`}>
             {planta.nombre}
           </h3>
           {planta.nombreCientifico && (
-            <p className="text-xs italic text-gray-400">{planta.nombreCientifico}</p>
+            <p className={`font-display text-xs italic text-hueso-200/80
+                           transition-all duration-400
+                           ${hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}>
+              {planta.nombreCientifico}
+            </p>
           )}
         </div>
 
-        <div className="flex flex-wrap gap-1 pt-1">
+        {/* Badge ciclo vital */}
+        <div className="absolute top-3 right-3">
+          <span className={`${cfg.badgeClass} text-xs backdrop-blur-sm`}>
+            {cfg.icon}
+          </span>
+        </div>
+      </div>
+
+      {/* ── Info ── */}
+      <div className="p-4 flex-1 flex flex-col gap-3">
+        <div className="flex flex-wrap gap-1">
           {planta.acciones.slice(0, 3).map((a) => (
-            <span key={a} className="badge-accion">
-              {a}
-            </span>
+            <span key={a} className="badge-accion">{a}</span>
           ))}
           {planta.acciones.length > 3 && (
-            <span className="badge-accion">+{planta.acciones.length - 3}</span>
+            <span className="badge-accion text-humo-400">+{planta.acciones.length - 3}</span>
           )}
         </div>
+
+        {/* Acento de ciclo en el bottom */}
+        <div className={`mt-auto h-0.5 rounded-full transition-all duration-600 ${cfg.accentClass}
+                          ${hovered ? "w-full opacity-60" : "w-8 opacity-30"}`} />
       </div>
     </Link>
   );

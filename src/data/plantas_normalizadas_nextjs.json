@@ -1,8 +1,8 @@
 {
   "metadata": {
     "nombre": "Base inicial normalizada de plantas medicinales",
-    "version": 2,
-    "nota": "Generada a partir del PDF Acción Terapéutica. Dataset inicial para Next.js."
+    "version": 3,
+    "nota": "Generada a partir del PDF Acción Terapéutica y Herbario 7. Dataset para Next.js."
   },
   "plantas": [
     {
@@ -295,6 +295,57 @@
         "Hipoglucemiante",
         "Tonificante"
       ]
+    },
+    {
+      "nombre": "Caa Piquí",
+      "slug": "caa-piqui",
+      "nombreCientifico": "Stella media",
+      "familia": "Caryophyllaceae",
+      "acciones": [
+        "Demulcente",
+        "Remineralizante",
+        "Diurética",
+        "Expectorante"
+      ],
+      "sistemas": ["Urinario", "Respiratorio"],
+      "afecciones": ["Retención de líquidos", "Tos", "Congestión respiratoria"],
+      "descripcion": "Herbácea comestible. Parte usada: planta entera. Utilizada tradicionalmente como demulcente en crudo, remineralizante, diurética y expectorante.",
+      "precauciones": [],
+      "imagenes": [],
+      "fuentes": ["Herbario 7"]
+    },
+    {
+      "nombre": "Tala de Indio",
+      "slug": "tala-de-indio",
+      "nombreCientifico": "Holmbergia tweedii",
+      "familia": "Amaranthaceae",
+      "acciones": [
+        "Nutritiva",
+        "Alternativa (Sal vegetal)"
+      ],
+      "sistemas": ["Nutricional"],
+      "afecciones": ["Deficiencias minerales", "Sustitución de sodio"],
+      "descripcion": "Arbusto nativo. Parte usada: parte aérea. Utilizada históricamente por pueblos originarios como sal vegetal. Cuenta con frutos carnosos comestibles.",
+      "precauciones": [],
+      "imagenes": [],
+      "fuentes": ["Herbario 7"]
+    },
+    {
+      "nombre": "Palo Amarillo / Niño Rupá",
+      "slug": "palo-amarillo-nino-rupa",
+      "nombreCientifico": "Aloysia gratissima",
+      "familia": "Verbenaceae",
+      "acciones": [
+        "Antidepresiva",
+        "Antidiarreica",
+        "Antitusiva"
+      ],
+      "sistemas": ["Nervioso", "Digestivo", "Respiratorio"],
+      "afecciones": ["Estrés", "Depresión", "Resfríos", "Empachos", "Diarrea"],
+      "descripcion": "Arbusto. Parte usada: hojas. Utilizado tradicionalmente por sus marcadas propiedades antidepresivas, reguladoras del aparato digestivo (combate empachos y diarreas) y respiratorio.",
+      "precauciones": [],
+      "imagenes": [],
+      "fuentes": ["Herbario 7"]
     }
   ]
 }

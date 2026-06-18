@@ -2,22 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Google Fonts ──────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────────────────────── */
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-jost:      'Jost', system-ui, sans-serif;
+
+  /* Ciclo vital */
+  --color-brote:     #637d4d;   /* salvia-500  */
+  --color-floracion: #c96666;   /* petal-500   */
+  --color-marchitez: #6a6a62;   /* humo-500    */
+
+  /* Superficies */
+  --surface-base:    #fdfaf5;   /* hueso-50    */
+  --surface-card:    #f7f0e3;   /* hueso-100   */
+  --surface-overlay: rgba(253, 250, 245, 0.85);
+}
+
+/* ─── Base global ───────────────────────────────────────────────── */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-verde-50 text-gray-800;
+    @apply bg-hueso-50 text-humo-800 font-body antialiased;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(99, 125, 77, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 90%, rgba(201, 102, 102, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 40%, rgba(139, 123, 184, 0.03) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-salvia-200 text-salvia-900;
   }
 }
 
+/* ─── Grain overlay (cinematográfico, muy sutil) ────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.4s steps(1) infinite;
+}
+
+/* ─── Componentes ───────────────────────────────────────────────── */
 @layer components {
-  .card-planta {
-    @apply bg-white rounded-2xl shadow-sm border border-verde-100 p-5 hover:shadow-md transition-shadow;
+
+  /* Card base */
+  .card-herbarium {
+    @apply relative bg-hueso-100 border border-hueso-200 rounded-2xl overflow-hidden
+           transition-all duration-600 ease-out;
   }
 
+  .card-herbarium:hover {
+    @apply border-salvia-300 shadow-lg shadow-salvia-500/10;
+    transform: translateY(-3px);
+  }
+
+  /* Badge de acción terapéutica */
   .badge-accion {
-    @apply inline-block bg-verde-100 text-verde-700 text-xs font-medium px-2.5 py-1 rounded-full;
+    @apply inline-flex items-center gap-1
+           bg-salvia-100 text-salvia-700
+           text-xs font-body font-medium
+           px-2.5 py-1 rounded-full
+           border border-salvia-200/60
+           transition-colors duration-300;
   }
 
+  .badge-accion:hover {
+    @apply bg-salvia-200 text-salvia-800;
+  }
+
+  /* Badge de sistema corporal */
   .badge-sistema {
-    @apply inline-block bg-gray-100 text-gray-600 text-xs font-medium px-2.5 py-1 rounded-full;
+    @apply inline-flex items-center
+           bg-hueso-200 text-humo-600
+           text-xs font-body
+           px-2.5 py-1 rounded-full
+           border border-hueso-300/60;
+  }
+
+  /* Badge ciclo vital */
+  .badge-brote {
+    @apply inline-flex items-center gap-1
+           bg-salvia-50 text-salvia-600
+           text-xs font-body font-medium
+           px-2.5 py-1 rounded-full
+           border border-salvia-200;
+  }
+
+  .badge-floracion {
+    @apply inline-flex items-center gap-1
+           bg-petal-50 text-petal-500
+           text-xs font-body font-medium
+           px-2.5 py-1 rounded-full
+           border border-petal-200;
+  }
+
+  .badge-marchitez {
+    @apply inline-flex items-center gap-1
+           bg-humo-100 text-humo-500
+           text-xs font-body font-medium
+           px-2.5 py-1 rounded-full
+           border border-humo-200;
+  }
+
+  /* Separador orgánico */
+  .divider-organic {
+    @apply border-none h-px my-8;
+    background: linear-gradient(to right, transparent, #c8d4b8, transparent);
+  }
+
+  /* Prose botánico */
+  .prose-botanico {
+    @apply text-humo-700 font-body text-base leading-relaxed;
+  }
+
+  .prose-botanico h2 {
+    @apply font-display text-2xl text-humo-800 font-light italic mt-8 mb-3;
+  }
+
+  .prose-botanico p {
+    @apply mb-4;
+  }
+
+  .prose-botanico ul {
+    @apply list-none space-y-1 pl-0;
+  }
+
+  .prose-botanico ul li::before {
+    content: "·";
+    @apply text-salvia-400 mr-2 font-bold;
+  }
+
+  /* Input search */
+  .input-botanico {
+    @apply w-full bg-hueso-100 border border-hueso-300
+           rounded-xl px-4 py-2.5
+           text-humo-700 font-body text-sm
+           placeholder:text-humo-400
+           focus:outline-none focus:border-salvia-300 focus:ring-2 focus:ring-salvia-200/40
+           transition-all duration-300;
+  }
+}
+
+/* ─── Animaciones de entrada escalonada ─────────────────────────── */
+.bloom-1  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.bloom-2  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both; }
+.bloom-3  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+.bloom-4  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both; }
+.bloom-5  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+.bloom-6  { animation: bloom 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.30s both; }
+
+/* respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+  .bloom-1, .bloom-2, .bloom-3, .bloom-4, .bloom-5, .bloom-6 {
+    animation: none;
+    opacity: 1;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

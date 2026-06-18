@@ -16,94 +16,150 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div className="space-y-12">
-      {/* Hero */}
-      <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold text-verde-900">
-          🌿 Plantas Medicinales
-        </h1>
-        <p className="text-gray-600 max-w-xl mx-auto">
-          Registro botánico organizado por acción terapéutica, sistema corporal,
-          afección y uso tradicional.
+    <div className="space-y-24">
+
+      {/* ── Hero ─────────────────────────────────────────────────── */}
+      <section className="relative min-h-[60vh] flex flex-col justify-center py-16">
+
+        {/* Decoración tipográfica de fondo */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden>
+          <span className="absolute -top-8 -right-12 font-display text-[22vw] font-light
+                           text-salvia-500/[0.035] leading-none tracking-tighter">
+            Herb.
+          </span>
+        </div>
+
+        <div className="relative z-10 bloom-1">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-salvia-500 mb-6">
+            Un herbarium emocional moderno
+          </p>
+          <h1 className="font-display text-6xl sm:text-8xl font-light text-humo-800
+                         leading-[0.9] tracking-tight mb-8">
+            Plantas<br />
+            <span className="italic text-salvia-500">Medicinales</span>
+          </h1>
+          <p className="font-body text-base font-light text-humo-500 max-w-md leading-relaxed mb-10">
+            Cada planta cuenta un ciclo — desde el brote hasta la marchitez.
+            Un registro botánico organizado por acción terapéutica,
+            sistema corporal y uso tradicional.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <Link href="/plantas"
+                  className="group flex items-center gap-2
+                             bg-salvia-600 hover:bg-salvia-700
+                             text-hueso-50 font-body text-sm font-medium
+                             px-6 py-3 rounded-full
+                             transition-all duration-400">
+              <span>Explorar plantas</span>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+            <Link href="/afecciones"
+                  className="flex items-center gap-2
+                             border border-humo-300 hover:border-salvia-400
+                             text-humo-600 hover:text-salvia-600
+                             font-body text-sm
+                             px-6 py-3 rounded-full
+                             transition-all duration-400">
+              Buscar por afección
+            </Link>
+          </div>
+        </div>
+
+        {/* Línea decorativa */}
+        <div className="absolute bottom-0 left-0 right-0 h-px
+                        bg-gradient-to-r from-transparent via-salvia-200 to-transparent" />
+      </section>
+
+      {/* ── Ciclo vital (leyenda) ─────────────────────────────────── */}
+      <section className="bloom-2">
+        <p className="font-body text-xs tracking-[0.25em] uppercase text-humo-400 mb-6">
+          Ciclo de vida
         </p>
-        <div className="flex flex-wrap justify-center gap-3 pt-2">
-          <Link
-            href="/plantas"
-            className="bg-verde-700 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-verde-900 transition-colors"
-          >
-            Ver todas las plantas
-          </Link>
-          <Link
-            href="/afecciones"
-            className="border border-verde-700 text-verde-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-verde-100 transition-colors"
-          >
-            Buscar por afección
-          </Link>
-          <Link
-            href="/acciones"
-            className="border border-gray-300 text-gray-600 px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors"
-          >
-            Ver acciones terapéuticas
-          </Link>
+        <div className="grid grid-cols-3 gap-4 max-w-2xl">
+          {[
+            { icon: "🌱", label: "Brote",     desc: "Propiedades básicas · fácil uso",           color: "border-salvia-200 bg-salvia-50/50" },
+            { icon: "🌸", label: "Floración", desc: "Múltiples acciones · plena potencia",       color: "border-petal-200 bg-petal-50/50" },
+            { icon: "🍂", label: "Precaución",desc: "Toxicidad · contraindicaciones",            color: "border-humo-200 bg-humo-50/50" },
+          ].map(({ icon, label, desc, color }) => (
+            <div key={label} className={`rounded-xl border p-4 ${color}`}>
+              <div className="text-2xl mb-2">{icon}</div>
+              <p className="font-display text-base font-medium text-humo-700">{label}</p>
+              <p className="font-body text-xs text-humo-400 mt-1 leading-relaxed">{desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Estadísticas */}
-      <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-        <div className="card-planta">
-          <p className="text-3xl font-bold text-verde-700">{plantas.length}</p>
-          <p className="text-sm text-gray-500 mt-1">Plantas</p>
-        </div>
-        <div className="card-planta">
-          <p className="text-3xl font-bold text-verde-700">{afecciones.length}</p>
-          <p className="text-sm text-gray-500 mt-1">Afecciones</p>
-        </div>
-        <div className="card-planta">
-          <p className="text-3xl font-bold text-verde-700">{acciones.length}</p>
-          <p className="text-sm text-gray-500 mt-1">Acciones</p>
-        </div>
-        <div className="card-planta">
-          <p className="text-3xl font-bold text-verde-700">{sistemas.length}</p>
-          <p className="text-sm text-gray-500 mt-1">Sistemas</p>
+      {/* ── Stats ────────────────────────────────────────────────── */}
+      <section className="bloom-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          {[
+            { n: plantas.length,   label: "Plantas" },
+            { n: afecciones.length,label: "Afecciones" },
+            { n: acciones.length,  label: "Acciones" },
+            { n: sistemas.length,  label: "Sistemas" },
+          ].map(({ n, label }) => (
+            <div key={label} className="text-center">
+              <p className="font-display text-5xl font-light text-salvia-600">{n}</p>
+              <p className="font-body text-xs tracking-widest uppercase text-humo-400 mt-1">{label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Ejes de exploración */}
-      <section className="grid sm:grid-cols-3 gap-6">
-        <Link href="/afecciones" className="card-planta block text-center space-y-2 hover:border-verde-500">
-          <div className="text-3xl">🩺</div>
-          <h2 className="font-semibold text-verde-800">Por afección</h2>
-          <p className="text-sm text-gray-500">
-            Tengo dolor de estómago, tos, insomnio… ¿qué planta uso?
-          </p>
-        </Link>
-        <Link href="/acciones" className="card-planta block text-center space-y-2 hover:border-verde-500">
-          <div className="text-3xl">⚗️</div>
-          <h2 className="font-semibold text-verde-800">Por acción terapéutica</h2>
-          <p className="text-sm text-gray-500">
-            Digestiva, expectorante, antibiótica, adaptógena…
-          </p>
-        </Link>
-        <Link href="/sistemas" className="card-planta block text-center space-y-2 hover:border-verde-500">
-          <div className="text-3xl">🫀</div>
-          <h2 className="font-semibold text-verde-800">Por sistema corporal</h2>
-          <p className="text-sm text-gray-500">
-            Digestivo, respiratorio, nervioso, hepático…
-          </p>
-        </Link>
+      <hr className="divider-organic" />
+
+      {/* ── Ejes de navegación ───────────────────────────────────── */}
+      <section className="bloom-3">
+        <p className="font-body text-xs tracking-[0.25em] uppercase text-humo-400 mb-8">
+          Explorar por
+        </p>
+        <div className="grid sm:grid-cols-3 gap-5">
+          {[
+            { href: "/afecciones", icon: "🩺", title: "Afección",        desc: "Tengo tos, insomnio, dolor de estómago…" },
+            { href: "/acciones",   icon: "⚗️",  title: "Acción terapéutica", desc: "Digestiva, expectorante, adaptógena…" },
+            { href: "/sistemas",   icon: "🫀",  title: "Sistema corporal", desc: "Digestivo, respiratorio, nervioso…" },
+          ].map(({ href, icon, title, desc }) => (
+            <Link key={href} href={href}
+                  className="group card-herbarium p-6 flex flex-col gap-3">
+              <span className="text-3xl transition-transform duration-400 group-hover:scale-110 inline-block">
+                {icon}
+              </span>
+              <div>
+                <h2 className="font-display text-xl font-light text-humo-800">{title}</h2>
+                <p className="font-body text-sm text-humo-400 mt-1 leading-relaxed">{desc}</p>
+              </div>
+              <span className="font-body text-xs text-salvia-500 mt-auto
+                               opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Explorar →
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
 
-      {/* Plantas del registro */}
+      {/* ── Grid de plantas ──────────────────────────────────────── */}
       <section>
-        <div className="flex items-baseline justify-between mb-4">
-          <h2 className="text-xl font-semibold text-verde-900">Plantas en el registro</h2>
-          <Link href="/plantas" className="text-sm text-verde-700 hover:underline">
+        <div className="flex items-baseline justify-between mb-8">
+          <div>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-humo-400 mb-1">
+              El registro
+            </p>
+            <h2 className="font-display text-3xl font-light text-humo-800">
+              Todas las plantas
+            </h2>
+          </div>
+          <Link href="/plantas"
+                className="font-body text-sm text-salvia-500 hover:text-salvia-700
+                           transition-colors duration-300">
             Ver todas →
           </Link>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
           {plantas.map((planta, i) => (
-            <PlantaCard key={planta.slug} planta={planta} priority={i < 6} />
+            <PlantaCard key={planta.slug} planta={planta} priority={i < 6} index={i} />
           ))}
         </div>
       </section>

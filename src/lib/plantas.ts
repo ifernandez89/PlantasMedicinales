@@ -124,7 +124,14 @@ export async function getPlantaBySlug(slug: string): Promise<Planta> {
 
     imagen:             data.imagen ?? null,
     imagenes:           arr(data.imagenes),
-    fuentes:            arr(data.fuentes),
+    fuentes:            Array.isArray(data.fuentes)
+      ? data.fuentes.map((f: any) => ({
+          titulo: String(f?.titulo ?? ""),
+          tipo: (["PDF", "libro", "articulo", "web", "otro"].includes(f?.tipo) ? f.tipo : "otro") as Fuente["tipo"],
+          url: f?.url ? String(f.url) : undefined,
+          año: typeof f?.año === "number" ? f.año : undefined,
+        }))
+      : [],
 
     descripcionHtml:    processed.toString(),
   };

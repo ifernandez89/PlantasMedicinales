@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllAfecciones, getPlantasByAfeccion } from "@/lib/plantas";
+import PlantaCard from "@/components/PlantaCard";
 
 export async function generateStaticParams() {
   const afecciones = await getAllAfecciones();
@@ -14,11 +15,7 @@ export async function generateMetadata({
   params: Promise<{ afeccion: string }>;
 }): Promise<Metadata> {
   const { afeccion } = await params;
-  const nombre = decodeURIComponent(afeccion);
-  return {
-    title: `${nombre} — plantas indicadas`,
-    description: `Plantas medicinales recomendadas para ${nombre}`,
-  };
+  return { title: decodeURIComponent(afeccion) };
 }
 
 export default async function AfeccionPage({
@@ -28,51 +25,34 @@ export default async function AfeccionPage({
 }) {
   const { afeccion } = await params;
   const nombre = decodeURIComponent(afeccion);
-
   const plantas = await getPlantasByAfeccion(nombre);
 
   if (!plantas.length) notFound();
 
   return (
-    <div className="space-y-8">
-      <div>
-        <Link
-          href="/afecciones"
-          className="text-sm text-verde-700 hover:underline"
-        >
-          ← Volver a afecciones
+    <div className="space-y-12">
+      <header className="bloom-1 pt-4">
+        <Link href="/afecciones"
+              className="font-body text-xs tracking-widest uppercase text-humo-400
+                         hover:text-petal-500 transition-colors duration-300 mb-8 inline-block">
+          ← Afecciones
         </Link>
-        <h1 className="text-3xl font-bold text-verde-900 mt-2">{nombre}</h1>
-        <p className="text-gray-500 mt-1">
+        <p className="font-body text-xs tracking-[0.25em] uppercase text-humo-400 mb-3">
+          Plantas indicadas para
+        </p>
+        <h1 className="font-display text-5xl sm:text-6xl font-light text-humo-800 leading-tight">
+          {nombre}
+        </h1>
+        <p className="font-body text-sm text-humo-400 mt-3">
           {plantas.length} planta{plantas.length !== 1 ? "s" : ""} indicadas
         </p>
-      </div>
+      </header>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {plantas.map((planta) => (
-          <Link
-            key={planta.slug}
-            href={`/plantas/${planta.slug}`}
-            className="card-planta block space-y-3"
-          >
-            <div>
-              <h2 className="font-semibold text-verde-800 text-lg">
-                {planta.nombre}
-              </h2>
-              {planta.nombreCientifico && (
-                <p className="text-xs italic text-gray-400">
-                  {planta.nombreCientifico}
-                </p>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-1">
-              {planta.acciones.map((a) => (
-                <span key={a} className="badge-accion">
-                  {a}
-                </span>
-              ))}
-            </div>
-          </Link>
+      <hr className="divider-organic" />
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {plantas.map((planta, i) => (
+          <PlantaCard key={planta.slug} planta={planta} index={i} />
         ))}
       </div>
     </div>
