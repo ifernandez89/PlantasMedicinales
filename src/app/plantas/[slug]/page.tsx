@@ -55,6 +55,9 @@ export default async function PlantaPage({
   const ciclo = getCiclo(planta);
   const cm    = cicloMeta[ciclo];
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const imageSrc = planta.imagen ? (planta.imagen.startsWith("/") ? `${basePath}${planta.imagen}` : planta.imagen) : "";
+
   return (
     <article className="space-y-16">
 
@@ -74,7 +77,7 @@ export default async function PlantaPage({
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden
                             shadow-2xl shadow-humo-900/20">
               <Image
-                src={planta.imagen}
+                src={imageSrc}
                 alt={planta.nombre}
                 fill
                 className={`object-cover transition-all duration-[2000ms] ease-out

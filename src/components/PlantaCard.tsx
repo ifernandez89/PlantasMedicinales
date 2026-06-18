@@ -47,6 +47,9 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
   const ciclo = getCicloVital(planta);
   const cfg = cicloConfig[ciclo];
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const imageSrc = planta.imagen ? (planta.imagen.startsWith("/") ? `${basePath}${planta.imagen}` : planta.imagen) : "";
+
   return (
     <Link
       href={`/plantas/${planta.slug}`}
@@ -60,7 +63,7 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
         {planta.imagen ? (
           <>
             <Image
-              src={planta.imagen}
+              src={imageSrc}
               alt={planta.nombre}
               fill
               className={`object-cover transition-all duration-800 ease-out ${
