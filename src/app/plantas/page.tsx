@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { getAllPlantas } from "@/lib/plantas";
-import PlantaCard from "@/components/PlantaCard";
+import SearchBar from "@/components/SearchBar";
+import InfiniteScroll from "@/components/InfiniteScroll";
 
 export const metadata: Metadata = {
   title: "El registro completo",
   description: "Todas las plantas medicinales del herbarium.",
 };
 
+// Forzar generación estática
+export const dynamic = 'force-static';
+
 export default async function PlantasPage() {
+  // Cargar todas las plantas en build time
+  // El filtrado lo hace el cliente con SearchBar + InfiniteScroll
   const plantas = await getAllPlantas();
 
   return (
@@ -23,18 +29,17 @@ export default async function PlantasPage() {
           <span className="italic text-salvia-500">medicinales</span>
         </h1>
         <p className="font-body text-sm text-humo-400 mt-4 max-w-sm leading-relaxed">
-          {plantas.length} especies documentadas · ordenadas alfabéticamente
+          {plantas.length} especies documentadas
         </p>
       </header>
 
       <hr className="divider-organic" />
 
-      {/* Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {plantas.map((planta, i) => (
-          <PlantaCard key={planta.slug} planta={planta} priority={i < 3} index={i} />
-        ))}
-      </div>
+      {/* Buscador protagonista */}
+      {/* (ya está integrado en InfiniteScroll) */}
+
+      {/* Grid con Infinite Scroll */}
+      <InfiniteScroll plantas={plantas} itemsPerPage={15} />
     </div>
   );
 }

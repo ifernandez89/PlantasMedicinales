@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import type { Planta } from "@/lib/plantas";
 
 interface Props {
@@ -43,42 +42,43 @@ const cicloConfig = {
 };
 
 export default function PlantaCard({ planta, priority = false, index = 0 }: Props) {
-  const [hovered, setHovered] = useState(false);
   const ciclo = getCicloVital(planta);
   const cfg = cicloConfig[ciclo];
 
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const imageSrc = planta.imagen ? (planta.imagen.startsWith("/") ? `${basePath}${planta.imagen}` : planta.imagen) : "";
+  
+  // Usar thumbnail optimizado si existe, sino imagen original
+  const imageSrc = planta.imagenThumb || planta.imagen;
+  const finalSrc = imageSrc ? (imageSrc.startsWith("/") ? `${basePath}${imageSrc}` : imageSrc) : "";
 
   return (
     <Link
       href={`/plantas/${planta.slug}`}
-      className={`card-herbarium flex flex-col bloom-${Math.min(index + 1, 6)}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      aria-label={`Ver ${planta.nombre}`}
+      className={`card-herbarium flex flex-col group bloom-${Math.min(index + 1, 6)}`}
     >
       {/* ── Imagen con overlay orgánico ── */}
       <div className="relative w-full h-52 overflow-hidden">
-        {planta.imagen ? (
+        {finalSrc ? (
           <>
             <Image
-              src={imageSrc}
+              src={finalSrc}
               alt={planta.nombre}
-              fill
-              className={`object-cover transition-all duration-800 ease-out ${
-                hovered
-                  ? ciclo === "marchitez"
-                    ? "scale-105 saturate-50 brightness-90"
-                    : "scale-105 brightness-105"
-                  : "scale-100"
+              width={400}
+              height={300}
+              className={`object-cover w-full h-full transition-all duration-800 ease-out ${
+                ciclo === "marchitez"
+                  ? "group-hover:scale-105 group-hover:saturate-50 group-hover:brightness-90"
+                  : "group-hover:scale-105 group-hover:brightness-105"
               }`}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loading={priority ? "eager" : "lazy"}
               priority={priority}
             />
             {/* Gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t ${cfg.overlayClass}
-                             transition-opacity duration-600 ${hovered ? "opacity-100" : "opacity-70"}`} />
+            <div 
+              className={`absolute inset-0 bg-gradient-to-t ${cfg.overlayClass}
+                         transition-opacity duration-600 group-hover:opacity-100 opacity-70`} 
+            />
           </>
         ) : (
           <div className="w-full h-full bg-hueso-200 flex items-center justify-center">
@@ -90,13 +90,13 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <h3 className={`font-display text-2xl font-light text-hueso-50
                           transition-all duration-400
-                          ${hovered ? "translate-y-0 opacity-100" : "translate-y-1 opacity-95"}`}>
+                          group-hover:translate-y-0 group-hover:opacity-100 translate-y-1 opacity-95`}>
             {planta.nombre}
           </h3>
           {planta.nombreCientifico && (
             <p className={`font-display text-xs italic text-hueso-200/80
                            transition-all duration-400
-                           ${hovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}>
+                           group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-2`}>
               {planta.nombreCientifico}
             </p>
           )}
@@ -123,7 +123,7 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
 
         {/* Acento de ciclo en el bottom */}
         <div className={`mt-auto h-0.5 rounded-full transition-all duration-600 ${cfg.accentClass}
-                          ${hovered ? "w-full opacity-60" : "w-8 opacity-30"}`} />
+                          group-hover:w-full group-hover:opacity-60 w-8 opacity-30`} />
       </div>
     </Link>
   );

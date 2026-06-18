@@ -51,6 +51,7 @@ export interface Planta {
 
   // Recursos
   imagen: string | null;
+  imagenThumb: string | null;  // Nueva: miniatura optimizada
   imagenes: string[];
   fuentes: Fuente[];
 
@@ -73,6 +74,23 @@ function arr(value: unknown): string[] {
   return [];
 }
 
+/**
+ * Convierte ruta de imagen a formato optimizado
+ * /imagenes/planta.png -> /imagenes-optimized/thumbs/planta.webp
+ */
+function getOptimizedImagePath(originalPath: string | null, type: 'thumb' | 'full' = 'thumb'): string | null {
+  if (!originalPath) return null;
+  
+  // Si ya es webp optimizada, devolver tal cual
+  if (originalPath.includes('imagenes-optimized')) return originalPath;
+  
+  // Convertir PNG a WEBP optimizado
+  const parsed = path.parse(originalPath);
+  const nameWithoutExt = parsed.name;
+  
+  return `/imagenes-optimized/${type}/${nameWithoutExt}.webp`;
+}
+
 // ─── API pública ──────────────────────────────────────────────────────────────
 
 /**
@@ -93,56 +111,54 @@ export async function getPlantaBySlug(slug: string): Promise<Planta> {
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
 
-  const processed = await remark().use(remarkHtml).process(content);
+  // Procesar Markdown a HTML
+  const result = await remark().use(remarkHtml).process(content);
+  const descripcionHtml = result.toString();
 
+  // Mapear frontmatter a Planta
+  const imagenOriginal = data.imagen ? String(data.imagen) : null;
+  
   return {
     slug,
-    nombre:             data.nombre ?? slug,
-    nombreCientifico:   data.nombreCientifico ?? null,
-    familia:            data.familia ?? null,
-    otrosNombres:       arr(data.otrosNombres),
+    nombre: data.nombre || slug,
+    nombreCientifico: data.nombreCientifico || data.nombre_cientifico || null,
+    familia: data.familia || null,
+    otrosNombres: arr(data.otrosNombres || data.otros_nombres),
 
-    descripcionBotanica: data.descripcionBotanica ?? null,
-    origen:             data.origen ?? null,
-    distribucion:       arr(data.distribucion),
-    habitat:            data.habitat ?? null,
+    descripcionBotanica: data.descripcionBotanica || data.descripcion_botanica || null,
+    origen: data.origen || null,
+    distribucion: arr(data.distribucion),
+    habitat: data.habitat || null,
 
-    acciones:           arr(data.acciones),
-    sistemas:           arr(data.sistemas),
-    afecciones:         arr(data.afecciones),
-    // accionesTerapeuticas es un array de objetos — no usar arr()
-    accionesTerapeuticas: Array.isArray(data.accionesTerapeuticas)
-      ? data.accionesTerapeuticas.map((at: AccionTerapeutica) => ({
-          accion:    at.accion    ?? "",
-          sistemas:  Array.isArray(at.sistemas)  ? at.sistemas  : [],
-          afecciones: Array.isArray(at.afecciones) ? at.afecciones : [],
-        }))
-      : [],
+    acciones: arr(data.acciones),
+    sistemas: arr(data.sistemas),
+    afecciones: arr(data.afecciones),
+    accionesTerapeuticas: (data.accionesTerapeuticas || data.acciones_terapeuticas || []).map(
+      (a: any) => ({
+        accion: a.accion || "",
+        sistemas: arr(a.sistemas),
+        afecciones: arr(a.afecciones),
+      })
+    ),
 
-    usosEtnobotanicos:  arr(data.usosEtnobotanicos),
-    polinizadores:      arr(data.polinizadores),
-    principiosActivos:  arr(data.principiosActivos),
+    usosEtnobotanicos: arr(data.usosEtnobotanicos || data.usos_etnobotanicos),
+    polinizadores: arr(data.polinizadores),
+    principiosActivos: arr(data.principiosActivos || data.principios_activos),
 
-    precauciones:       arr(data.precauciones),
+    precauciones: arr(data.precauciones),
     contraindicaciones: arr(data.contraindicaciones),
-    toxicidad:          data.toxicidad ?? null,
+    toxicidad: data.toxicidad || null,
 
-    imagen:             data.imagen ?? null,
-    imagenes:           arr(data.imagenes),
-    fuentes:            Array.isArray(data.fuentes)
-      ? data.fuentes.map((f: any) => ({
-          titulo: String(f?.titulo ?? ""),
-          tipo: (["PDF", "libro", "articulo", "web", "otro"].includes(f?.tipo) ? f.tipo : "otro") as Fuente["tipo"],
-          url: f?.url ? String(f.url) : undefined,
-          año: typeof f?.año === "number" ? f.año : undefined,
-        }))
-      : [],
+    imagen: imagenOriginal,
+    imagenThumb: getOptimizedImagePath(imagenOriginal, 'thumb'),
+    imagenes: arr(data.imagenes),
+    fuentes: data.fuentes || [],
 
-    epocaFloracion:     data.epocaFloracion ? String(data.epocaFloracion) : null,
-    epocaFructificacion: data.epocaFructificacion ? String(data.epocaFructificacion) : null,
-    tipoCiclo:          data.tipoCiclo ? String(data.tipoCiclo) : null,
+    epocaFloracion: data.epocaFloracion || data.epoca_floracion || null,
+    epocaFructificacion: data.epocaFructificacion || data.epoca_fructificacion || null,
+    tipoCiclo: data.tipoCiclo || data.tipo_ciclo || null,
 
-    descripcionHtml:    processed.toString(),
+    descripcionHtml,
   };
 }
 
@@ -155,86 +171,141 @@ export async function getAllPlantas(): Promise<Planta[]> {
   return plantas.sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
 }
 
-// ─── Índices invertidos ───────────────────────────────────────────────────────
-
 /**
- * { "Digestiva": [planta, planta, ...], ... }
+ * Agrupa plantas por acción terapéutica.
  */
 export async function getPlantasPorAccion(): Promise<Record<string, Planta[]>> {
-  const plantas = await getAllPlantas();
-  const mapa: Record<string, Planta[]> = {};
-  for (const planta of plantas) {
-    for (const accion of planta.acciones) {
-      if (!mapa[accion]) mapa[accion] = [];
-      mapa[accion].push(planta);
-    }
-  }
-  return mapa;
+  const todas = await getAllPlantas();
+  const map: Record<string, Planta[]> = {};
+  todas.forEach((p) => {
+    p.acciones.forEach((acc) => {
+      if (!map[acc]) map[acc] = [];
+      map[acc].push(p);
+    });
+  });
+  return map;
 }
 
 /**
- * { "Digestivo": [planta, planta, ...], ... }
+ * Obtiene plantas que tienen una acción concreta.
  */
-export async function getPlantasPorSistema(): Promise<Record<string, Planta[]>> {
-  const plantas = await getAllPlantas();
-  const mapa: Record<string, Planta[]> = {};
-  for (const planta of plantas) {
-    for (const sistema of planta.sistemas) {
-      if (!mapa[sistema]) mapa[sistema] = [];
-      mapa[sistema].push(planta);
-    }
-  }
-  return mapa;
+export async function getPlantasConAccion(accion: string): Promise<Planta[]> {
+  const todas = await getAllPlantas();
+  return todas.filter((p) =>
+    p.acciones.some((a) => a.toLowerCase() === accion.toLowerCase())
+  );
 }
 
 /**
- * { "Gastritis": [planta, planta, ...], ... }
+ * Agrupa plantas por afección.
  */
 export async function getPlantasPorAfeccion(): Promise<Record<string, Planta[]>> {
-  const plantas = await getAllPlantas();
-  const mapa: Record<string, Planta[]> = {};
-  for (const planta of plantas) {
-    for (const afeccion of planta.afecciones) {
-      if (!mapa[afeccion]) mapa[afeccion] = [];
-      mapa[afeccion].push(planta);
-    }
-  }
-  return mapa;
+  const todas = await getAllPlantas();
+  const map: Record<string, Planta[]> = {};
+  todas.forEach((p) => {
+    p.afecciones.forEach((afec) => {
+      if (!map[afec]) map[afec] = [];
+      map[afec].push(p);
+    });
+  });
+  return map;
 }
 
-// ─── Listas únicas ────────────────────────────────────────────────────────────
+/**
+ * Obtiene plantas que tratan una afección concreta.
+ */
+export async function getPlantasConAfeccion(afeccion: string): Promise<Planta[]> {
+  const todas = await getAllPlantas();
+  return todas.filter((p) =>
+    p.afecciones.some((a) => a.toLowerCase() === afeccion.toLowerCase())
+  );
+}
 
+/**
+ * Agrupa plantas por sistema corporal.
+ */
+export async function getPlantasPorSistema(): Promise<Record<string, Planta[]>> {
+  const todas = await getAllPlantas();
+  const map: Record<string, Planta[]> = {};
+  todas.forEach((p) => {
+    p.sistemas.forEach((sis) => {
+      if (!map[sis]) map[sis] = [];
+      map[sis].push(p);
+    });
+  });
+  return map;
+}
+
+/**
+ * Busca plantas por texto (nombre, nombre científico, acciones, afecciones)
+ */
+export async function searchPlantas(query: string): Promise<Planta[]> {
+  const todas = await getAllPlantas();
+  const q = query.toLowerCase().trim();
+  
+  if (!q) return todas;
+  
+  return todas.filter(p => 
+    p.nombre.toLowerCase().includes(q) ||
+    p.nombreCientifico?.toLowerCase().includes(q) ||
+    p.otrosNombres.some(n => n.toLowerCase().includes(q)) ||
+    p.acciones.some(a => a.toLowerCase().includes(q)) ||
+    p.afecciones.some(a => a.toLowerCase().includes(q)) ||
+    p.sistemas.some(s => s.toLowerCase().includes(q))
+  );
+}
+
+
+/**
+ * Obtiene todas las acciones únicas
+ */
 export async function getAllAcciones(): Promise<string[]> {
-  return Object.keys(await getPlantasPorAccion()).sort((a, b) =>
-    a.localeCompare(b, "es")
-  );
+  const todas = await getAllPlantas();
+  const accionesSet = new Set<string>();
+  todas.forEach(p => p.acciones.forEach(a => accionesSet.add(a)));
+  return Array.from(accionesSet).sort((a, b) => a.localeCompare(b, "es"));
 }
 
-export async function getAllSistemas(): Promise<string[]> {
-  return Object.keys(await getPlantasPorSistema()).sort((a, b) =>
-    a.localeCompare(b, "es")
-  );
-}
-
-export async function getAllAfecciones(): Promise<string[]> {
-  return Object.keys(await getPlantasPorAfeccion()).sort((a, b) =>
-    a.localeCompare(b, "es")
-  );
-}
-
-// ─── Filtros individuales ─────────────────────────────────────────────────────
-
+/**
+ * Obtiene plantas por acción (alias de getPlantasConAccion)
+ */
 export async function getPlantasByAccion(accion: string): Promise<Planta[]> {
-  const mapa = await getPlantasPorAccion();
-  return mapa[accion] ?? [];
+  return getPlantasConAccion(accion);
 }
 
-export async function getPlantasBySistema(sistema: string): Promise<Planta[]> {
-  const mapa = await getPlantasPorSistema();
-  return mapa[sistema] ?? [];
+/**
+ * Obtiene todas las afecciones únicas
+ */
+export async function getAllAfecciones(): Promise<string[]> {
+  const todas = await getAllPlantas();
+  const afeccionesSet = new Set<string>();
+  todas.forEach(p => p.afecciones.forEach(a => afeccionesSet.add(a)));
+  return Array.from(afeccionesSet).sort((a, b) => a.localeCompare(b, "es"));
 }
 
+/**
+ * Obtiene plantas por afección (alias de getPlantasConAfeccion)
+ */
 export async function getPlantasByAfeccion(afeccion: string): Promise<Planta[]> {
-  const mapa = await getPlantasPorAfeccion();
-  return mapa[afeccion] ?? [];
+  return getPlantasConAfeccion(afeccion);
+}
+
+/**
+ * Obtiene todos los sistemas únicos
+ */
+export async function getAllSistemas(): Promise<string[]> {
+  const todas = await getAllPlantas();
+  const sistemasSet = new Set<string>();
+  todas.forEach(p => p.sistemas.forEach(s => sistemasSet.add(s)));
+  return Array.from(sistemasSet).sort((a, b) => a.localeCompare(b, "es"));
+}
+
+/**
+ * Obtiene plantas por sistema
+ */
+export async function getPlantasBySistema(sistema: string): Promise<Planta[]> {
+  const todas = await getAllPlantas();
+  return todas.filter((p) =>
+    p.sistemas.some((s) => s.toLowerCase() === sistema.toLowerCase())
+  );
 }
