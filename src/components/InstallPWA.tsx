@@ -54,17 +54,36 @@ export default function InstallPWA() {
 
   const handleDismiss = () => {
     setShowInstallButton(false);
-    // Guardar preferencia para no mostrar por 7 días
+    // Guardar preferencia para no mostrar por 90 días (3 meses)
     localStorage.setItem("pwa-install-dismissed", new Date().toISOString());
   };
 
   // No mostrar si está instalada o si fue descartada recientemente
   useEffect(() => {
     const dismissed = localStorage.getItem("pwa-install-dismissed");
+    const firstVisit = localStorage.getItem("pwa-first-visit");
+    
+    // Si nunca visitó, marcar primera visita y NO mostrar
+    if (!firstVisit) {
+      localStorage.setItem("pwa-first-visit", new Date().toISOString());
+      setShowInstallButton(false);
+      return;
+    }
+
+    // Si ya visitó antes, verificar si pasaron al menos 7 días desde la primera visita
+    const firstVisitDate = new Date(firstVisit);
+    const daysSinceFirstVisit = (Date.now() - firstVisitDate.getTime()) / (1000 * 60 * 60 * 24);
+    
+    if (daysSinceFirstVisit < 7) {
+      setShowInstallButton(false);
+      return;
+    }
+
+    // Si fue descartado, no mostrar por 90 días
     if (dismissed) {
       const dismissedDate = new Date(dismissed);
       const daysSinceDismissed = (Date.now() - dismissedDate.getTime()) / (1000 * 60 * 60 * 24);
-      if (daysSinceDismissed < 7) {
+      if (daysSinceDismissed < 90) {
         setShowInstallButton(false);
       }
     }
