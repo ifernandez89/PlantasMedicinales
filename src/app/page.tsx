@@ -76,16 +76,16 @@ export default async function HomePage() {
         <p className="font-body text-xs tracking-[0.25em] uppercase text-humo-400 mb-6">
           Ciclo de vida
         </p>
-        <div className="grid grid-cols-3 gap-4 max-w-2xl">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-2xl items-stretch">
           {[
             { icon: "🌱", label: "Brote",     desc: "Propiedades básicas · fácil uso",           color: "border-salvia-200 bg-salvia-50/50" },
             { icon: "🌸", label: "Floración", desc: "Múltiples acciones · plena potencia",       color: "border-petal-200 bg-petal-50/50" },
             { icon: "🍂", label: "Precaución",desc: "Toxicidad · contraindicaciones",            color: "border-humo-200 bg-humo-50/50" },
           ].map(({ icon, label, desc, color }) => (
-            <div key={label} className={`rounded-xl border p-4 ${color}`}>
-              <div className="text-2xl mb-2">{icon}</div>
-              <p className="font-display text-base font-medium text-humo-700">{label}</p>
-              <p className="font-body text-xs text-humo-400 mt-1 leading-relaxed">{desc}</p>
+            <div key={label} className={`rounded-xl border p-3 sm:p-4 flex flex-col h-full ${color}`}>
+              <div className="text-xl sm:text-2xl mb-2">{icon}</div>
+              <p className="font-display text-sm sm:text-base font-medium text-humo-700 leading-tight">{label}</p>
+              <p className="font-body text-[11px] sm:text-xs text-humo-400 mt-1 leading-relaxed flex-1">{desc}</p>
             </div>
           ))}
         </div>
