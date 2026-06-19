@@ -65,7 +65,7 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
               alt={planta.nombre}
               width={400}
               height={300}
-              className={`object-cover w-full h-full transition-all duration-800 ease-out ${
+              className={`object-cover w-full h-full transition-[transform,filter] duration-700 ease-out will-change-transform ${
                 ciclo === "marchitez"
                   ? "group-hover:scale-105 group-hover:saturate-50 group-hover:brightness-90"
                   : "group-hover:scale-105 group-hover:brightness-105"
@@ -104,7 +104,7 @@ export default function PlantaCard({ planta, priority = false, index = 0 }: Prop
 
         {/* Badge ciclo vital */}
         <div className="absolute top-3 right-3">
-          <span className={`${cfg.badgeClass} text-xs backdrop-blur-sm`}>
+          <span className={`${cfg.badgeClass} text-xs bg-hueso-50/90`}>
             {cfg.icon}
           </span>
         </div>
