@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdfaf6"/>
+      <stop offset="100%" style="stop-color:#f5f0e8"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo -->
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect width="1280" height="68" fill="#fdfaf6" opacity="0.95"/>
+  <rect width="1280" height="1" y="68" fill="#e8e0d0"/>
+  <text x="48" y="42" font-family="Georgia, serif" font-size="20" fill="#7ba684">✦</text>
+  <text x="78" y="44" font-family="Georgia, serif" font-size="18" font-weight="300" fill="#3d3830" letter-spacing="4">HERBARIUM</text>
+  <text x="680" y="44" font-family="Arial, sans-serif" font-size="14" fill="#8a7f6e" text-anchor="middle">Plantas</text>
+  <text x="780" y="44" font-family="Arial, sans-serif" font-size="14" fill="#8a7f6e" text-anchor="middle">Afecciones</text>
+  <text x="880" y="44" font-family="Arial, sans-serif" font-size="14" fill="#8a7f6e" text-anchor="middle">Acciones</text>
+  <text x="980" y="44" font-family="Arial, sans-serif" font-size="14" fill="#8a7f6e" text-anchor="middle">Sistemas</text>
+
+  <!-- Hero left column -->
+  <text x="80" y="160" font-family="Georgia, serif" font-size="52" font-weight="300" fill="#3d3830" font-style="italic">Herbarium</text>
+  <text x="80" y="215" font-family="Georgia, serif" font-size="28" font-weight="300" fill="#8a7f6e">Plantas Medicinales</text>
+  <text x="80" y="258" font-family="Arial, sans-serif" font-size="15" fill="#a09080" font-weight="300">Guía etnobotánica · Acción terapéutica · Sistema corporal</text>
+  <rect x="80" y="292" width="160" height="48" rx="24" fill="#7ba684"/>
+  <text x="160" y="322" font-family="Arial, sans-serif" font-size="15" fill="#fdfaf6" text-anchor="middle">Ver plantas</text>
+  <rect x="256" y="292" width="180" height="48" rx="24" fill="none" stroke="#c4b99a" stroke-width="1.5"/>
+  <text x="346" y="322" font-family="Arial, sans-serif" font-size="15" fill="#8a7f6e" text-anchor="middle">Por afección</text>
+
+  <!-- Stats row -->
+  <text x="80" y="388" font-family="Georgia, serif" font-size="36" font-weight="300" fill="#7ba684">80+</text>
+  <text x="80" y="412" font-family="Arial, sans-serif" font-size="12" fill="#a09080">plantas</text>
+  <text x="220" y="388" font-family="Georgia, serif" font-size="36" font-weight="300" fill="#7ba684">12</text>
+  <text x="220" y="412" font-family="Arial, sans-serif" font-size="12" fill="#a09080">sistemas</text>
+  <text x="340" y="388" font-family="Georgia, serif" font-size="36" font-weight="300" fill="#7ba684">40+</text>
+  <text x="340" y="412" font-family="Arial, sans-serif" font-size="12" fill="#a09080">afecciones</text>
+
+  <!-- Right panel - plant cards -->
+  <rect x="640" y="88" width="640" height="712" fill="#f5f0e8" opacity="0.5"/>
+  <!-- Card 1 -->
+  <rect x="672" y="108" width="280" height="320" rx="14" fill="#fdfaf6" stroke="#e8e0d0" stroke-width="1"/>
+  <rect x="672" y="108" width="280" height="200" rx="14" fill="#e8f0e9"/>
+  <rect x="672" y="268" width="280" height="40" fill="#e8f0e9"/>
+  <ellipse cx="812" cy="190" rx="70" ry="90" fill="#b8a9d4" opacity="0.55" transform="rotate(-15 812 190)"/>
+  <ellipse cx="790" cy="210" rx="45" ry="65" fill="#9b8bb8" opacity="0.4" transform="rotate(8 790 210)"/>
+  <text x="812" y="340" font-family="Georgia, serif" font-size="18" fill="#3d3830" text-anchor="middle">Lavanda</text>
+  <text x="812" y="362" font-family="Arial, sans-serif" font-size="12" fill="#8a7f6e" text-anchor="middle" font-style="italic">Lavandula officinalis</text>
+  <rect x="692" y="378" width="80" height="24" rx="12" fill="#e8f0e9"/>
+  <text x="732" y="395" font-family="Arial, sans-serif" font-size="12" fill="#5a8a5e" text-anchor="middle">Sedante</text>
+  <rect x="784" y="378" width="90" height="24" rx="12" fill="#ede8f5"/>
+  <text x="829" y="395" font-family="Arial, sans-serif" font-size="12" fill="#7060a0" text-anchor="middle">Nervioso</text>
+
+  <!-- Card 2 -->
+  <rect x="976" y="108" width="280" height="320" rx="14" fill="#fdfaf6" stroke="#e8e0d0" stroke-width="1"/>
+  <rect x="976" y="108" width="280" height="200" rx="14" fill="#f0ebe0"/>
+  <rect x="976" y="268" width="280" height="40" fill="#f0ebe0"/>
+  <ellipse cx="1116" cy="185" rx="70" ry="50" fill="#7ba684" opacity="0.5" transform="rotate(15 1116 185)"/>
+  <ellipse cx="1095" cy="210" rx="45" ry="32" fill="#5a8a5e" opacity="0.4" transform="rotate(-10 1095 210)"/>
+  <ellipse cx="1140" cy="215" rx="36" ry="24" fill="#7ba684" opacity="0.35" transform="rotate(5 1140 215)"/>
+  <text x="1116" y="340" font-family="Georgia, serif" font-size="18" fill="#3d3830" text-anchor="middle">Menta</text>
+  <text x="1116" y="362" font-family="Arial, sans-serif" font-size="12" fill="#8a7f6e" text-anchor="middle" font-style="italic">Mentha piperita</text>
+  <rect x="996" y="378" width="90" height="24" rx="12" fill="#e8f0e9"/>
+  <text x="1041" y="395" font-family="Arial, sans-serif" font-size="12" fill="#5a8a5e" text-anchor="middle">Digestiva</text>
+  <rect x="1096" y="378" width="80" height="24" rx="12" fill="#f5f0e0"/>
+  <text x="1136" y="395" font-family="Arial, sans-serif" font-size="12" fill="#8a6e30" text-anchor="middle">Digestivo</text>
+
+  <!-- Cards row 2 -->
+  <rect x="672" y="448" width="280" height="180" rx="14" fill="#fdfaf6" stroke="#e8e0d0" stroke-width="1"/>
+  <rect x="672" y="448" width="280" height="90" rx="14" fill="#ede8f5"/>
+  <rect x="672" y="498" width="280" height="40" fill="#ede8f5"/>
+  <circle cx="812" cy="480" r="22" fill="#f5e070" opacity="0.9"/>
+  <ellipse cx="812" cy="451" rx="11" ry="23" fill="#fdfaf6" opacity="0.85"/>
+  <ellipse cx="812" cy="509" rx="11" ry="23" fill="#fdfaf6" opacity="0.85"/>
+  <ellipse cx="784" cy="480" rx="23" ry="11" fill="#fdfaf6" opacity="0.85"/>
+  <ellipse cx="840" cy="480" rx="23" ry="11" fill="#fdfaf6" opacity="0.85"/>
+  <circle cx="812" cy="480" r="18" fill="#f5d040"/>
+  <text x="812" y="570" font-family="Georgia, serif" font-size="16" fill="#3d3830" text-anchor="middle">Manzanilla</text>
+  <text x="812" y="590" font-family="Arial, sans-serif" font-size="12" fill="#8a7f6e" text-anchor="middle" font-style="italic">Matricaria chamomilla</text>
+  <rect x="692" y="606" width="80" height="22" rx="11" fill="#e8f0e9"/>
+  <text x="732" y="622" font-family="Arial, sans-serif" font-size="11" fill="#5a8a5e" text-anchor="middle">Sedante</text>
+
+  <rect x="976" y="448" width="280" height="180" rx="14" fill="#fdfaf6" stroke="#e8e0d0" stroke-width="1"/>
+  <rect x="976" y="448" width="280" height="90" rx="14" fill="#fce8d0"/>
+  <rect x="976" y="498" width="280" height="40" fill="#fce8d0"/>
+  <ellipse cx="1116" cy="475" rx="45" ry="35" fill="#c88040" opacity="0.3" transform="rotate(20 1116 475)"/>
+  <ellipse cx="1095" cy="490" rx="30" ry="22" fill="#a06020" opacity="0.25"/>
+  <text x="1116" y="570" font-family="Georgia, serif" font-size="16" fill="#3d3830" text-anchor="middle">Cúrcuma</text>
+  <text x="1116" y="590" font-family="Arial, sans-serif" font-size="12" fill="#8a7f6e" text-anchor="middle" font-style="italic">Curcuma longa</text>
+  <rect x="996" y="606" width="100" height="22" rx="11" fill="#fce8d0"/>
+  <text x="1046" y="622" font-family="Arial, sans-serif" font-size="11" fill="#a06030" text-anchor="middle">Antiinflamatorio</text>
+
+  <!-- Footer -->
+  <rect x="0" y="750" width="1280" height="50" fill="#fdfaf6"/>
+  <rect x="0" y="750" width="1280" height="1" fill="#e8e0d0"/>
+  <text x="640" y="780" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#8a7f6e" text-anchor="middle">Herbarium · Solo con fines informativos · No reemplaza consejo médico</text>
+</svg>

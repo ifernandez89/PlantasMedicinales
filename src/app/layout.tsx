@@ -20,6 +20,8 @@ const jost = Jost({
   display: "swap",
 });
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: {
     template: "%s — Herbarium",
@@ -27,17 +29,23 @@ export const metadata: Metadata = {
   },
   description:
     "Un herbarium emocional moderno. Plantas medicinales organizadas por acción terapéutica, sistema corporal y ciclo de vida.",
+  manifest: `${BASE_PATH}/manifest.json`,
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Herbarium",
+  },
   formatDetection: {
     telephone: false,
   },
   themeColor: "#7ba684",
   icons: {
     icon: [
-      { url: "/icons/icon-192x192.svg", sizes: "192x192", type: "image/svg+xml" },
-      { url: "/icons/icon-512x512.svg", sizes: "512x512", type: "image/svg+xml" },
+      { url: `${BASE_PATH}/icons/icon-192x192.svg`, sizes: "192x192", type: "image/svg+xml" },
+      { url: `${BASE_PATH}/icons/icon-512x512.svg`, sizes: "512x512", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/icons/apple-touch-icon.svg", sizes: "180x180", type: "image/svg+xml" },
+      { url: `${BASE_PATH}/icons/apple-touch-icon.svg`, sizes: "180x180", type: "image/svg+xml" },
     ],
   },
 };
@@ -152,6 +160,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Scroll to Top Button */}
         <ScrollToTop />
+
+        {/* PWA — Registro del Service Worker */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  var swPath = '${BASE_PATH}/sw.js';
+                  navigator.serviceWorker.register(swPath, { scope: '${BASE_PATH}/' })
+                    .catch(function() {});
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );
