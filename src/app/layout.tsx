@@ -125,6 +125,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p className="font-body text-xs text-humo-400">
                 Solo con fines informativos · No reemplaza consejo médico
               </p>
+              <p className="font-body text-[11px] leading-relaxed text-humo-400 max-w-xl">
+                Este proyecto fue inspirado en el trabajo práctico grupal de plantas medicinales y en los herbarios de Ecoternura.
+              </p>
             </div>
 
             {/* Ciclo en el footer */}
