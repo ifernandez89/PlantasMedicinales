@@ -196,3 +196,42 @@ Con estas mejoras, tu Herbarium:
 - Escala perfectamente a **500+ plantas**
 
 **El rendimiento ya no va a ser un problema, incluso con 200-300 plantas** 🚀🌱
+
+---
+
+## 📄 Exportación a PDF — Libro completo
+
+### Descripción
+
+Se agregó la posibilidad de exportar todo el herbarium como un PDF completo,
+con portada, índice y una página por planta.
+
+### Archivos nuevos
+
+- `src/app/export/page.tsx` — Página `/export`: Server Component que obtiene todas las plantas
+  y renderiza la portada, el índice y el contenido de cada planta
+- `src/app/export/PrintButton.tsx` — Client Component con el botón `window.print()`
+- `src/components/ExportPDF.tsx` — Botón flotante en el layout global (abre `/export` en pestaña nueva)
+- `EXPORT_PDF.md` — Documentación de la metodología
+
+### Archivos modificados
+
+- `src/app/layout.tsx` — Se importa y renderiza `<ExportPDF />`
+- `src/app/globals.css` — Se agregan estilos `@media print` globales
+
+### Estructura del PDF generado
+
+```
+Portada → Índice (74 plantas) → Planta 1 → Planta 2 → ... → Planta 74
+```
+
+Cada planta incluye: imagen, nombre científico, tags de acciones/sistemas/afecciones,
+descripción, datos botánicos, principios activos y precauciones.
+
+### Metodología
+
+Se optó por el patrón **`/export` + `window.print()`** en lugar de librerías como
+`jsPDF` o `html2canvas`, porque produce texto seleccionable, imágenes nítidas,
+saltos de página controlados por CSS y no requiere dependencias adicionales.
+
+Ver `EXPORT_PDF.md` para la documentación completa.

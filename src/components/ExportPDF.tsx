@@ -1,13 +1,9 @@
 "use client";
 
-import Link from "next/link";
-
 export default function ExportPDF() {
   return (
-    <Link
-      href="/export"
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      onClick={() => window.print()}
       className="fixed bottom-6 right-20 z-40
                  w-12 h-12 rounded-full
                  bg-humo-600 hover:bg-humo-700
@@ -17,8 +13,8 @@ export default function ExportPDF() {
                  focus:outline-none focus:ring-2 focus:ring-humo-400 focus:ring-offset-2
                  hover:shadow-xl hover:scale-110
                  print:hidden"
-      aria-label="Exportar libro completo a PDF"
-      title="Exportar libro completo a PDF"
+      aria-label="Exportar esta página a PDF"
+      title="Exportar esta página a PDF"
     >
       <svg
         className="w-5 h-5"
@@ -33,6 +29,6 @@ export default function ExportPDF() {
           d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h4a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
         />
       </svg>
-    </Link>
+    </button>
   );
 }
