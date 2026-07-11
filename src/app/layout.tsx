@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Jost } from "next/font/google";
 import Link from "next/link";
 import NavMobile from "@/components/NavMobile";
 import ScrollToTop from "@/components/ScrollToTop";
+import ExportPDF from "@/components/ExportPDF";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -163,6 +164,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Scroll to Top Button */}
         <ScrollToTop />
+
+        {/* Export to PDF Button */}
+        <ExportPDF />
 
         {/* PWA — Registro del Service Worker */}
         <script
