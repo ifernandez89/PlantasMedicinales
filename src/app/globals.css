@@ -204,3 +204,32 @@
   80% { transform: translate(0.5%, 0.5%); }
   90% { transform: translate(-1%, 0); }
 }
+
+/* ─── Print / Export PDF ────────────────────────────────────────── */
+@media print {
+  header,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .card-herbarium,
+  [class*="rounded-xl"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
