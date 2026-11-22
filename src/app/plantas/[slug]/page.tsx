@@ -225,6 +225,43 @@ export default async function PlantaPage({
         </section>
       )}
 
+      {/* ── Galería de láminas y ejemplares referenciados ────────── */}
+      {planta.imagenes && planta.imagenes.length > 0 && (
+        <section className="bloom-3">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-humo-400 mb-6">
+            Láminas y ejemplares referenciados ({planta.imagenes.length})
+          </p>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {planta.imagenes.map((img, idx) => {
+              const gallerySrc = img.startsWith("/") ? `${basePath}${img}` : img;
+              const label = img
+                .replace(/^\/imagenes\//, "")
+                .replace(/\.(webp|png|jpg|jpeg)$/i, "")
+                .replace(/-/g, " ");
+              return (
+                <div
+                  key={img}
+                  className="card-herbarium overflow-hidden rounded-2xl space-y-3 p-3"
+                >
+                  <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-hueso-200/40">
+                    <Image
+                      src={gallerySrc}
+                      alt={`${planta.nombre} — ejemplar ${idx + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <p className="font-body text-xs tracking-wider uppercase text-humo-500 text-center px-2">
+                    Lámina {idx + 1} · {label}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       {/* ── Acciones terapéuticas detalladas ─────────────────────── */}
       {planta.accionesTerapeuticas.length > 0 && (
         <section className="bloom-3">
