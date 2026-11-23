@@ -85,7 +85,7 @@ contraindicaciones:
   - "Ingesta de semillas"
 toxicidad: "Semillas purgantes/eméticas; hojas de uso tradicional seguro en infusión moderada"
 
-imagen: ""
+imagen: "/imagenes/maiten.webp"
 imagenes: []
 epocaFloracion: "septiembre a noviembre"
 epocaFructificacion: "enero a marzo"

@@ -85,7 +85,7 @@ contraindicaciones:
   - "Uso prolongado"
 toxicidad: "Contiene alcaloides solanáceos; los frutos son tóxicos y la sobredosis de hojas/tallos puede causar malestar digestivo o neurológico"
 
-imagen: ""
+imagen: "/imagenes/natre.webp"
 imagenes: []
 epocaFloracion: "octubre a enero"
 epocaFructificacion: "enero a marzo"

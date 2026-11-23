@@ -85,7 +85,7 @@ contraindicaciones:
   - "Embarazo y lactancia (evitar dosis altas por falta de estudios clínicos)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/paramela.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

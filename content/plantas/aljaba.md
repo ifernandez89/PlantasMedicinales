@@ -84,7 +84,7 @@ contraindicaciones:
   - "Embarazo (por su uso tradicional emenagogo)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/aljaba.webp"
 imagenes: []
 epocaFloracion: "noviembre a abril"
 epocaFructificacion: "enero a mayo"

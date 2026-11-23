@@ -86,7 +86,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/canchalagua.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero"
 epocaFructificacion: "enero a marzo"

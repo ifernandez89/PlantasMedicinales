@@ -88,7 +88,7 @@ contraindicaciones:
   - "Uso simultáneo con depresores del SNC o alcohol"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/nancolahuen.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

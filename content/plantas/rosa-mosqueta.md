@@ -89,7 +89,7 @@ contraindicaciones:
   - "No se reportan contraindicaciones mayores en uso alimentario o tópico habitual"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/rosa-mosqueta.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "febrero a mayo"

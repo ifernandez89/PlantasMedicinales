@@ -86,7 +86,7 @@ contraindicaciones:
   - "Estreñimiento crónico severo (por su alta astringencia)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/arrayan.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a mayo"

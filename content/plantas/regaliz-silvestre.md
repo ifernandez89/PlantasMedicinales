@@ -85,7 +85,7 @@ contraindicaciones:
   - "Embarazo"
 toxicidad: "El uso excesivo y sostenido de especies de Glycyrrhiza puede elevar la presión arterial y reducir el potasio"
 
-imagen: ""
+imagen: "/imagenes/regaliz-silvestre.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

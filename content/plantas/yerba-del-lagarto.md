@@ -84,7 +84,7 @@ contraindicaciones:
   - "Gastritis aguda (dosis altas de rizoma)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/yerba-del-lagarto.webp"
 imagenes: []
 epocaFloracion: "no posee flores (esporulación en verano-otoño)"
 epocaFructificacion: "esporas en soros dorados en el envés de las frondes"

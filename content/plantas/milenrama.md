@@ -93,7 +93,7 @@ contraindicaciones:
   - "Tratamiento anticoagulante"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/milenrama.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

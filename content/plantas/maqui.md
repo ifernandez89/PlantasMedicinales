@@ -89,7 +89,7 @@ contraindicaciones:
   - "Estreñimiento crónico severo (uso de hojas astringentes)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/maqui.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "diciembre a febrero"

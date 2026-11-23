@@ -80,7 +80,7 @@ contraindicaciones:
   - "Embarazo (evitar dosis concentradas o aceite esencial puro)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/tomillo-silvestre.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

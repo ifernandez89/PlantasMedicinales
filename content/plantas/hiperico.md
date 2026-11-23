@@ -88,7 +88,7 @@ contraindicaciones:
   - "Embarazo y lactancia"
 toxicidad: "Puede provocar fotodermatitis e interacciones farmacológicas relevantes"
 
-imagen: ""
+imagen: "/imagenes/hiperico.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "febrero a abril"

@@ -87,7 +87,7 @@ contraindicaciones:
   - "Embarazo y lactancia (por precaución)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/quinchamali.webp"
 imagenes: []
 epocaFloracion: "octubre a febrero"
 epocaFructificacion: "enero a abril"

@@ -87,7 +87,7 @@ contraindicaciones:
   - "Reflujo gastroesofágico severo"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/yerba-buena.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

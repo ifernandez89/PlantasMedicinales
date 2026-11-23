@@ -60,7 +60,7 @@ contraindicaciones:
   - "Piel lesionada o sensible"
 toxicidad: "Látex cáustico e irritante para piel y mucosas; tóxico si se ingiere"
 
-imagen: ""
+imagen: "/imagenes/duraznillo.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "diciembre a febrero"

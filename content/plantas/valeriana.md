@@ -90,7 +90,7 @@ contraindicaciones:
   - "Uso concomitante con sedantes hipnóticos"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/valeriana.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "febrero a marzo"

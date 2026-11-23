@@ -84,7 +84,7 @@ contraindicaciones:
   - "Embarazo y lactancia"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/quintral.webp"
 imagenes: []
 epocaFloracion: "marzo a septiembre (floración invernal clave)"
 epocaFructificacion: "septiembre a diciembre"

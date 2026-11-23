@@ -88,7 +88,7 @@ contraindicaciones:
   - "Enfermedad hepática o renal"
 toxicidad: "El aceite esencial concentrado es fuertemente hepatotóxico y neurotóxico por su contenido de pulegona"
 
-imagen: ""
+imagen: "/imagenes/poleo.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

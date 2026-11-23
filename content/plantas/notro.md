@@ -84,7 +84,7 @@ contraindicaciones:
   - "Embarazo y lactancia (evitar consumo interno prolongado)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/notro.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a marzo"

@@ -87,7 +87,7 @@ contraindicaciones:
   - "Embarazo y lactancia (por falta de estudios de seguridad)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/bailahuen.webp"
 imagenes: []
 epocaFloracion: "noviembre a marzo"
 epocaFructificacion: "enero a abril"

@@ -86,7 +86,7 @@ contraindicaciones:
   - "Niños menores de 2 años"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/menta-alemana.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

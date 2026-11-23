@@ -86,7 +86,7 @@ contraindicaciones:
   - "Embarazo y lactancia"
 toxicidad: "Alto contenido de oxalatos en hojas maduras si se ingieren en grandes cantidades"
 
-imagen: ""
+imagen: "/imagenes/lengua-de-vaca.webp"
 imagenes: []
 epocaFloracion: "noviembre a marzo"
 epocaFructificacion: "enero a abril"

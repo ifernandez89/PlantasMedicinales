@@ -87,7 +87,7 @@ contraindicaciones:
   - "Embarazo y lactancia"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/palo-pichi.webp"
 imagenes: []
 epocaFloracion: "octubre a enero"
 epocaFructificacion: "enero a marzo"

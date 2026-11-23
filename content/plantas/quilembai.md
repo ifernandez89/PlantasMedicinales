@@ -83,7 +83,7 @@ contraindicaciones:
   - "Embarazo y lactancia (por falta de estudios de seguridad)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/quilembai.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

@@ -84,7 +84,7 @@ contraindicaciones:
   - "Glaucoma"
 toxicidad: "Puede provocar taquicardia, nerviosismo o elevación de la presión arterial en dosis altas o personas susceptibles"
 
-imagen: ""
+imagen: "/imagenes/solupe.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre (conos)"
 epocaFructificacion: "diciembre a febrero"

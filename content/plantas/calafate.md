@@ -87,7 +87,7 @@ contraindicaciones:
   - "Interacción potencial de berberina con hipoglucemiantes o anticoagulantes"
 toxicidad: "Frutos completamente comestibles; raíz y corteza en dosis elevadas pueden resultar irritantes o uterotónicas por la berberina"
 
-imagen: ""
+imagen: "/imagenes/calafate.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a marzo"

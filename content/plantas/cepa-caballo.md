@@ -87,7 +87,7 @@ contraindicaciones:
   - "Insuficiencia renal o hepática grave"
 toxicidad: "Las semillas y cotiledones contienen carboxiatractilósido (tóxico en altas cantidades); emplear únicamente follaje maduro en infusión moderada"
 
-imagen: ""
+imagen: "/imagenes/cepa-caballo.webp"
 imagenes: []
 epocaFloracion: "diciembre a abril"
 epocaFructificacion: "febrero a mayo"

@@ -87,7 +87,7 @@ contraindicaciones:
   - "Niños pequeños"
 toxicidad: "En dosis altas sus aceites esenciales pueden irritar el sistema nervioso o digestivo"
 
-imagen: ""
+imagen: "/imagenes/eter.webp"
 imagenes: []
 epocaFloracion: "enero a marzo"
 epocaFructificacion: "marzo a abril"

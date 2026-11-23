@@ -87,7 +87,7 @@ contraindicaciones:
   - "No se reportan contraindicaciones relevantes en dosis habituales"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/parrilla.webp"
 imagenes: []
 epocaFloracion: "septiembre a diciembre"
 epocaFructificacion: "enero a marzo"

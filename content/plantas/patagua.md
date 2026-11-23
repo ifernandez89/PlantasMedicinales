@@ -82,7 +82,7 @@ contraindicaciones:
   - "Embarazo (uso interno prolongado no evaluado)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/patagua.webp"
 imagenes: []
 epocaFloracion: "enero a marzo"
 epocaFructificacion: "mayo a agosto"

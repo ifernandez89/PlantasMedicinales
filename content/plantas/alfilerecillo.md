@@ -87,7 +87,7 @@ contraindicaciones:
   - "Embarazo (evitar uso interno sin indicación médica)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/alfilerecillo.webp"
 imagenes: []
 epocaFloracion: "septiembre a enero"
 epocaFructificacion: "octubre a febrero"

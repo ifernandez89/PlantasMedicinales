@@ -86,7 +86,7 @@ contraindicaciones:
   - "Embarazo y lactancia (uso interno por precaución; uso tópico seguro)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/panil.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

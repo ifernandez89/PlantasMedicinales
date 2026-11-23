@@ -83,7 +83,7 @@ contraindicaciones:
   - "Niños pequeños"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/radal.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "enero a marzo"

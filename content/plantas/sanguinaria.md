@@ -88,7 +88,7 @@ contraindicaciones:
   - "Embarazo (evitar dosis concentradas)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/sanguinaria.webp"
 imagenes: []
 epocaFloracion: "noviembre a abril"
 epocaFructificacion: "enero a mayo"

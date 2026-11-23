@@ -88,7 +88,7 @@ contraindicaciones:
   - "Embarazo y lactancia"
 toxicidad: "El ácido nordihidroguaiarético (NDGA) puede generar toxicidad hepática y renal en ingesta oral repetida; muy segura y eficaz por vía tópica"
 
-imagen: ""
+imagen: "/imagenes/jarilla.webp"
 imagenes: []
 epocaFloracion: "octubre a diciembre"
 epocaFructificacion: "diciembre a febrero"

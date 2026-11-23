@@ -89,7 +89,7 @@ contraindicaciones:
   - "Embarazo (dosis elevadas)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/vira-vira.webp"
 imagenes: []
 epocaFloracion: "noviembre a marzo"
 epocaFructificacion: "enero a abril"

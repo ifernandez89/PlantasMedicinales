@@ -83,7 +83,7 @@ contraindicaciones:
   - "Embarazo (uso interno prolongado no evaluado)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/cadillo.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero"
 epocaFructificacion: "enero a abril"

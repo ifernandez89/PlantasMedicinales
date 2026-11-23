@@ -92,7 +92,7 @@ contraindicaciones:
   - "Tratamiento anticoagulante (precaución)"
 toxicidad: "Dosis muy altas de corteza pueden resultar irritantes gastrointestinales"
 
-imagen: ""
+imagen: "/imagenes/canelo.webp"
 imagenes: []
 epocaFloracion: "octubre a enero"
 epocaFructificacion: "febrero a abril"

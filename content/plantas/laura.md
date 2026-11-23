@@ -85,7 +85,7 @@ contraindicaciones:
   - "Embarazo (uso interno)"
 toxicidad: "Puede producir dermatitis de contacto en personas sensibles"
 
-imagen: ""
+imagen: "/imagenes/laura.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "febrero a abril"

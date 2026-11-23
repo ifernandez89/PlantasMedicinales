@@ -82,7 +82,7 @@ contraindicaciones:
   - "Embarazo y lactancia (por falta de datos clínicos)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/huautro.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "febrero a abril"

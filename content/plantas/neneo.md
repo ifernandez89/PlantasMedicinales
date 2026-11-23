@@ -83,7 +83,7 @@ contraindicaciones:
   - "Lactancia"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/neneo.webp"
 imagenes: []
 epocaFloracion: "noviembre a enero"
 epocaFructificacion: "enero a marzo"

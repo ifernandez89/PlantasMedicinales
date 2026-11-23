@@ -89,7 +89,7 @@ contraindicaciones:
   - "Úlcera gastroduodenal activa"
 toxicidad: "El exceso o uso prolongado puede resultar neurotóxico debido a la tuyona"
 
-imagen: ""
+imagen: "/imagenes/ajenjo.webp"
 imagenes: []
 epocaFloracion: "diciembre a marzo"
 epocaFructificacion: "febrero a abril"

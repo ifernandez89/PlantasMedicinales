@@ -85,7 +85,7 @@ contraindicaciones:
   - "Alergia a Asteraceae"
 toxicidad: "Contiene trazas de tuyona y lactonas amargas; evitar uso prolongado o concentrado"
 
-imagen: ""
+imagen: "/imagenes/yuyo-de-san-vicente.webp"
 imagenes: []
 epocaFloracion: "febrero a mayo"
 epocaFructificacion: "abril a junio"

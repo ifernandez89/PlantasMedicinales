@@ -74,7 +74,7 @@ contraindicaciones:
   - "Uso interno crónico"
 toxicidad: "Potencial hepatotoxicidad acumulativa por alcaloides pirrolizidínicos presentes en el género Senecio"
 
-imagen: ""
+imagen: "/imagenes/charcao.webp"
 imagenes: []
 epocaFloracion: "noviembre a febrero"
 epocaFructificacion: "enero a marzo"

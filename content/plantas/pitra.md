@@ -80,7 +80,7 @@ contraindicaciones:
   - "Embarazo y lactancia (evitar dosis altas)"
 toxicidad: null
 
-imagen: ""
+imagen: "/imagenes/pitra.webp"
 imagenes: []
 epocaFloracion: "diciembre a febrero"
 epocaFructificacion: "abril a junio"
