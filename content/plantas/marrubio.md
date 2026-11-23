@@ -6,6 +6,8 @@ familia: "Lamiaceae"
 otrosNombres:
   - "Hierba del sapo"
   - "Horehound"
+  - "Toronjil cuyano"
+  - "Toronjil"
 
 origen: "Mediterráneo, Asia occidental"
 distribucion:

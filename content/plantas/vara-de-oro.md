@@ -5,6 +5,8 @@ nombreCientifico: "Solidago chilensis"
 familia: "Asteraceae"
 otrosNombres:
   - "Vara de oro del sur"
+  - "Vara amarilla"
+  - "Romerillo amarillo"
   - "Goldenrod sudamericana"
   - "Lance de ouro"
 
